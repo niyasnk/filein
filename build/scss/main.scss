@@ -516,6 +516,17 @@
   }
  
 }
+
+.breadcrumb-item.active a {
+  color: #6c757d;
+}
+table{
+  p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 $breakpoint-mobile: 767px;
 @media (max-width: $breakpoint-mobile) {
   .preview_icons{
