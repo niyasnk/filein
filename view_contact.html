@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fileinvite | View contact</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./build/scss/main.css">
+  
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+ 
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav  ml-auto">
+      <li><a href="create_invite.html" class="btn btn-block bg-gradient-warning btn-flat btn-md">Create new invite <i class="ml-4 fas fa-barsfas fa-angle-right"></i></a></li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+    
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                 Logout
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+         
+          
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="getting-started.html" class="nav-link">
+              <i class="nav-icon fas fa-play-circle"></i>
+              <p>
+                Getting Started
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Dashboard
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invites.html" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Invites
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="invites.html" class="nav-link">
+                  <i class="far fa-envelope nav-icon"></i>
+                  <p>Invites</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-align-left"></i>
+              <p>
+                Templates
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-align-right nav-icon"></i>
+                  <p>Templates</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="contact.html" class="nav-link active">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Contacts
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item ">
+                <a href="contact.html" class="nav-link active">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p> Contacts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="company.html" class="nav-link">
+                  <i class="fas fa-building nav-icon"></i>
+                  <p> Companies</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  Settings
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link">
+                    <i class="fa fa-star nav-icon"></i>
+                    <p>Profile</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-wrench nav-icon"></i>
+                  <p>Preferences</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-credit-card nav-icon"></i>
+                  <p>Plans & Billing</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-link nav-icon"></i>
+                  <p>Integrations</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-plug nav-icon"></i>
+                  <p>Widget</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-image nav-icon "></i>
+                  <p>Branding</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-question-circle nav-icon"></i>
+                  <p>Help</p>
+                  <i class="fas fa-angle-right right"></i>
+                </a>
+              </li>
+            </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-8">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
+                <li class="breadcrumb-item active"><a href="view_contact.html">View contact</a></li>
+              </ol>
+            <h1 class="m-0">Contacts | <span class="text-muted">John Doe</span></h1>
+          </div><!-- /.col -->
+          <div class="col-md-12">
+            <div class="row mt-3">
+                <div class="col-md-8">
+                    <h5 class="text-muted mt-2"><i class="fa fa-address-card mr-2"></i>Contact Information | <i class="fa fa-address-card mr-2"></i>Associated Invites</h5>
+                </div>
+                <div class="col-md-3">
+                    <form action="#">
+                        <div class="input-group ">
+                            <input type="search" class="form-control form-control-md" placeholder="Search..">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-md btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        </div><!-- /.row -->
+       <div class="col-md-4 m-auto">
+        <div class="card card-primary card-outline card-outline-tabs">
+            <div class="card-body mb-0">
+               <div class="card__description">
+                <div class="name">Name:</div>
+                <div class="name_field">John</div>
+               </div>
+               <div class="card__description">
+                <div class="name">Company:</div>
+                <div class="name_field">m</div>
+               </div>
+               <div class="card__description">
+                <div class="name">Phone:</div>
+                <div class="name_field">+808976896</div>
+               </div>
+               <div class="card__description">
+                <div class="name">Address:</div>
+                <div class="name_field">
+                    hjkjkj
+                </div>
+               </div>
+               <hr>
+               <div class="float-sm-left">
+                <a href="edit_contact.html" class="btn btn-block bg-gray btn-flat">Edit contacts</a>
+            </div>
+            </div>
+            </div>
+       </div>
+        
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card card-primary card-outline card-outline-tabs">
+              <div class="card-body mb-0">
+                <div class="tab-content" id="custom-tabs-four-tabContent">
+                  <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                   
+                      <!---table-->
+                      <div class="card-body p-0">
+                        <table  class="table table-striped projects table-responsive mt-4 border-top border-bottom">
+                            <thead>
+                                <tr class="text-center">
+                                    <th style="width: 15%">
+                                        Subject
+                                    </th>
+                                    <th style="width: 10%">
+                                     Status
+                                  </th>
+                                    <th style="width: 10%">
+                                        User
+                                    </th>
+                                    <th style="width: 10%">
+                                       Reference ID
+                                    </th>
+                                    <th style="width: 10%">
+                                        Created
+                                     </th>
+                                     <th style="width: 10%">
+                                        ID
+                                     </th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+                                <tr>
+                                    <td>
+                                       <p><b>Test</b></p>
+                                       <p>test@gmail.com</p>
+                                    </td>
+                                  <td class="project_progress">
+                                      
+                                  </td>
+                                  <td class="project-state">
+                                      James
+                                  </td>
+                                  <td class="project-state">
+                                    2023-05-08
+                                 </td>
+                                  
+                                  <td class="project-actions text-center">
+                                     
+                                  </td>
+                                  <td class="project-actions text-center">
+                                     
+                                  </td>
+                              </tr>
+                              
+                              <tr>
+                                <td>
+                                  <p><b>Google bard</b></p>
+                                 <p>test@gmail.com</p>
+                                </td>
+                                <td class="project_progress">
+                                    
+                                </td>
+                                <td class="project-state">
+                                    James
+                                </td>
+                                <td class="project-state">
+                                    2023-05-08
+                                </td>
+                                
+                                <td class="project-actions text-center">
+                                   
+                                    
+                                </td>
+                            </tr>
+            
+                            </tbody>
+                            
+                         </table>
+                        
+                        </div>
+
+                      <!---table end-->
+                  </div>
+                  
+                 
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+           
+
+        </div><!-- /.container-fluid -->
+        
+      </section>
+    <!-- /.content -->
+  </div>
+
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer d-flex justify-content-center gap-3">
+    <b class="mr-2"><a href="https://www.fileinvite.com/terms">Terms</a></b> <span>|</span>
+    <b class="ml-2"><a href="https://www.fileinvite.com/terms">Privacy</a></b>
+   
+    <div class="float-right  d-sm-inline-block ml-2">
+     © 2014 - 2023  
+        FileInvite
+        . All Rights Reserved
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
+
+
+</body>
+</html>

@@ -582,6 +582,12 @@ table p {
   margin-bottom: 0;
 }
 
+.card__description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 @media (max-width: 767px) {
   .preview_icons {
     width: 100%;

@@ -526,7 +526,11 @@ table{
     margin-bottom: 0;
   }
 }
-
+.card__description{
+  display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 $breakpoint-mobile: 767px;
 @media (max-width: $breakpoint-mobile) {
   .preview_icons{
