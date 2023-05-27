@@ -579,3 +579,152 @@ $breakpoint-mobile: 767px;
    
   }
 }
+
+
+// .additional__wrap{
+//   background: #6b7381;
+// }
+.card-body .fa{font-size: 16px;}
+.accordion-wrap {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-bottom: 1px solid #ddd;
+}
+.panel-collapse {
+  padding:18px;
+  display: none;
+  background-color: #eee;
+  height: auto;
+  // overflow: hidden;
+  .pannel-display{
+    max-width: 600px;
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.create__wrapper{
+  .create__item__links{
+    padding: 12px;
+    border: 1px solid #ddd;
+    .create__item__block{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+  }
+}
+
+$slide-content-height: 250px;
+[data-target="slide-content"] {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.slide-down {
+  animation: slide-down 0.3s linear both;
+}
+
+.slide-up {
+  animation: slide-up 0.3s linear both;
+}
+
+@keyframes slide-down {
+  0% {
+    visibility: hidden;
+    height: 0;
+  }
+
+  95% {
+    visibility: visible;
+    height: $slide-content-height;
+  }
+
+  /* Set height to 'auto' after animation for spacing showing form-invalid feedback message */
+  100% {
+    visibility: visible;
+    height: auto;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    visibility: visible;
+    height: $slide-content-height;
+  }
+
+  to {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.slide__content{
+  p {
+    padding-bottom: 14px;
+  }
+  
+  b {
+    font-weight: bold;
+  }
+  
+  i {
+    font-style: italic;
+  }
+  
+  ul,
+  ol {
+    margin-left: 40px;
+  }
+  
+  #editor {
+    margin: 17px auto 20px auto;
+    padding: 7px 20px 20px 20px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    min-height: 230px;
+  }
+  
+  #toolbar {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-bottom:1px solid #ced4da;
+    padding: 4px 10px;
+    overflow: hidden;
+  }
+  
+  #page {
+    padding-top: 20px;
+    outline: none;
+  }
+  
+  .icon {
+    float: left;
+    height: 30px;
+    width: 40px;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    color: #464646;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .icon:hover {
+    border-color: #3e7086;
+    color: #3e7086;
+  }
+  .dropzone{
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+}

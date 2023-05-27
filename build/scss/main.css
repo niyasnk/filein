@@ -629,4 +629,132 @@ table p {
   .preview_icons .preview_body .preview_points {
     padding: 15px 18px;
   }
+}
+.card-body .fa {
+  font-size: 16px;
+}
+
+.accordion-wrap {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-bottom: 1px solid #ddd;
+}
+
+.panel-collapse {
+  padding: 18px;
+  display: none;
+  background-color: #eee;
+  height: auto;
+}
+.panel-collapse .pannel-display {
+  max-width: 600px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create__wrapper .create__item__links {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.create__wrapper .create__item__links .create__item__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-target=slide-content] {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.slide-down {
+  animation: slide-down 0.3s linear both;
+}
+
+.slide-up {
+  animation: slide-up 0.3s linear both;
+}
+
+@keyframes slide-down {
+  0% {
+    visibility: hidden;
+    height: 0;
+  }
+  95% {
+    visibility: visible;
+    height: 250px;
+  }
+  /* Set height to 'auto' after animation for spacing showing form-invalid feedback message */
+  100% {
+    visibility: visible;
+    height: auto;
+  }
+}
+@keyframes slide-up {
+  from {
+    visibility: visible;
+    height: 250px;
+  }
+  to {
+    visibility: hidden;
+    height: 0;
+  }
+}
+.slide__content p {
+  padding-bottom: 14px;
+}
+.slide__content b {
+  font-weight: bold;
+}
+.slide__content i {
+  font-style: italic;
+}
+.slide__content ul,
+.slide__content ol {
+  margin-left: 40px;
+}
+.slide__content #editor {
+  margin: 17px auto 20px auto;
+  padding: 7px 20px 20px 20px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  min-height: 230px;
+}
+.slide__content #toolbar {
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom: 1px solid #ced4da;
+  padding: 4px 10px;
+  overflow: hidden;
+}
+.slide__content #page {
+  padding-top: 20px;
+  outline: none;
+}
+.slide__content .icon {
+  float: left;
+  height: 30px;
+  width: 40px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  color: #464646;
+  text-align: center;
+  cursor: pointer;
+}
+.slide__content .icon:hover {
+  border-color: #3e7086;
+  color: #3e7086;
+}
+.slide__content .dropzone {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
 }/*# sourceMappingURL=main.css.map */
