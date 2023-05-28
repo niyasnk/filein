@@ -44,7 +44,7 @@
   }
 }
 .iti--separate-dial-code{width: 100%;}
-
+.btn__darkblue{background: #2E3192;}
 
 
 .switch .btn-toggle {
@@ -616,10 +616,20 @@ $breakpoint-mobile: 767px;
   .create__item__links{
     padding: 12px;
     border: 1px solid #ddd;
+    margin-bottom: 10px;
     .create__item__block{
       display: flex;
     justify-content: space-between;
     align-items: center;
+    .request-attachments-box{
+      i{
+      color: #007bff;
+      }
+      .request-attachments-count{
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
     }
   }
 }
@@ -726,5 +736,99 @@ $slide-content-height: 250px;
   .dropzone{
     border-radius: 5px;
     border: 1px solid #ced4da;
+  }
+}
+
+
+.accordion-wrapper {
+  position: relative;
+  margin-bottom: .5rem;
+}
+.acc-head{
+  position: relative;
+  background: #dadee2;
+  border-bottom: 1px solid #eee;
+}
+.acc-head::after{
+  content: '\276F';
+  position: absolute;
+  right: 16px;
+  color: grey;
+  transform: rotate(0deg);
+  transition: .4s;
+}
+.acc-head.active::after{
+  content: '\276F';
+  position: absolute;
+  right: 16px;
+  color: grey;
+  transform: rotate(90deg);
+  transition: .4s;
+}
+.acc-body{
+  padding: 1rem;
+  display: none;
+  background: #dadee2;
+}
+#copyModal,#deleteModal{
+  .modal-header{
+   background: #2E3192;
+   color: #fff;
+   .close{
+    color: #fff;
+   }
+  }
+}
+.cloud__wraps{
+  margin-top: 1rem;
+  
+  padding: 20px;
+&:hover{
+  background: #fff;
+}
+  .cloud_img{
+    margin-bottom: 1rem;
+    img{
+    width: 65px;
+    height: 65px;
+    }
+  }
+  .clouds_title{
+  a{
+    color: #2E3192;
+    strong{
+      font-size: 17px;
+      color: #2E3192;
+    }
+  }
+  p{
+    margin: 1.3rem;
+    color: #918080;
+    font-size: 18px;
+  }
+  }
+}
+
+.nav-pills-wrap{
+  
+  .flex-column{
+    min-height: 400px;
+    padding: 10px;
+    border: 1px solid #2E3192;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #6a7f95;
+  }
+}
+.tab-content__wrapper{
+  border: 1px solid #2E3192;
+  .template__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ddd;
+    padding: 10px 15px;
+    margin-bottom: 10px;
   }
 }

@@ -284,15 +284,289 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-          <div class="card">
-            
+          <div class="card ">
+            <div class="card-header">
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="search" class="form-control form-control-md" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-md btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="float-sm-right">
+                            <button type="buttton" class="btn btn-block btn-primary btn-flat" >Create Folder</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="float-sm-left">
+                            <button type="buttton" class="btn btn-block btn-warning btn-flat" onclick="window.location.href='create__template.html';">Create Template</button>
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+
+                <!-- Demo header-->
+<div class="py-4 header">
+    <div class="container py-2">
+       
+        <div class="row">
+            <div class="col-md-3 nav-pills-wrap">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link mb-2 p-2  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        <i class="fa fa-user-circle-o mr-2"></i>
+                        <span class="font-weight-bold  text-uppercase"><i class="fas fa-user mr-3"></i>Mine</span></a>
+
+                    <a class="nav-link mb-2 p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fa fa-calendar-minus-o mr-2"></i>
+                        <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Shared</span></a>
+
+                    <a class="nav-link mb-2 p-2 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Fileinvite</span></a>
+
+                    </div>
+            </div>
+
+
+            <div class="col-md-9 tab-content__wrapper">
+                <!-- Tabs content -->
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade  rounded  show active p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                       <div class="template__wrapper">
+                            <div class="template__desc">
+                                <i class="fas fa-align-left"></i>
+                                <strong>Sample - Identification Documents</strong><br/>
+                                <small>2023-05-23</small>
+                            </div>
+                            <div class="template__actions">
+                                <div class="project-actions text-center">
+                                    <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                        <i class="fas fa-copy">
+                                        </i>
+                                        Copy
+                                    </a>
+                                    <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                                </div>
+                            </div>
+                       </div>
+
+                       <div class="template__wrapper">
+                                <div class="template__desc">
+                                    <i class="fas fa-align-left"></i>
+                                    <strong>Sample - Identification Documents</strong><br/>
+                                    <small>2023-05-23</small>
+                                </div>
+                                <div class="template__actions">
+                                    <div class="project-actions text-center">
+                                        <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                            <i class="fas fa-copy">
+                                            </i>
+                                            Copy
+                                        </a>
+                                        <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Delete
+                                    </a>
+                                    </div>
+                                </div>
+                       </div>
+
+                   <div class="template__wrapper">
+                    <div class="template__desc">
+                        <i class="fas fa-align-left"></i>
+                        <strong>Sample - Identification Documents</strong><br/>
+                        <small>2023-05-23</small>
+                    </div>
+                    <div class="template__actions">
+                        <div class="project-actions text-center">
+                            <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                <i class="fas fa-copy">
+                                </i>
+                                Copy
+                            </a>
+                            <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                            <i class="fas fa-trash">
+                            </i>
+                            Delete
+                        </a>
+                        </div>
+                    </div>
+               </div>
+
+               <div class="template__wrapper">
+                        <div class="template__desc">
+                            <i class="fas fa-align-left"></i>
+                            <strong>Sample - Identification Documents</strong><br/>
+                            <small>2023-05-23</small>
+                        </div>
+                        <div class="template__actions">
+                            <div class="project-actions text-center">
+                                <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                    <i class="fas fa-copy">
+                                    </i>
+                                    Copy
+                                </a>
+                                <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
+                            </div>
+                        </div>
+                 </div>
+                    </div>
+                    
+                    <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="template__wrapper">
+                            <div class="template__desc">
+                                <i class="fas fa-align-left"></i>
+                                <strong>Sample - Identification Documents</strong><br/>
+                                <small>2023-05-23</small>
+                            </div>
+                            <div class="template__actions">
+                                <div class="project-actions text-center">
+                                    <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                        <i class="fas fa-copy">
+                                        </i>
+                                        Copy
+                                    </a>
+                                    <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                                </div>
+                            </div>
+                   </div>  
+                    </div>
+                    
+                    <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="template__wrapper">
+                            <div class="template__desc">
+                                <i class="fas fa-align-left"></i>
+                                <strong>Sample - Identification Documents</strong><br/>
+                                <small>2023-05-23</small>
+                            </div>
+                            <div class="template__actions">
+                                <div class="project-actions text-center">
+                                    <a class="btn btn-primary btn-sm" href="edit_template.html">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#copyModal">
+                                        <i class="fas fa-copy">
+                                        </i>
+                                        Copy
+                                    </a>
+                                    <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       
           </div>
     
-    <!--second card END -->
+              <!---modal copy poup start-->
+    <div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Copy Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label>Choose a name for the request copy.</label>
+              <div class="form-group">
+                <input type="text" class="form-control" id="reference-id" value="Driver's License - copy" placeholder="Drivers request">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Copy Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!---modal copy poup end-->   
+
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="CopyModalLabel">Remove Request</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you sure you want to remove this request from the invite? This action can't be undone.</p>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-danger">Remove</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!---modal copy poup end-->   
             
         </div><!-- /.container-fluid -->
         
-      </section>
+    </section>
     <!-- /.content -->
   </div>
 
@@ -320,7 +594,7 @@
 <script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 <script src="plugins/dropzone/min/dropzone.min.js"></script>
 <script src="dist/js/script.js"></script>
-
+<script src="dist/js/adminlte.js"></script>
 <script>
     $(function () {
       $('.select2').select2()
@@ -331,54 +605,7 @@
     $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
-var acc = document.getElementsByClassName("accordion-wrap");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
-
-const slideUpBtn = document.querySelector('[data-target="slide-up"]');
-const slideDownBtn = document.querySelector('[data-target="slide-down"]');
-const slideContent = document.querySelector('[data-target="slide-content"]');
-slideDownBtn.addEventListener("click", slideDown);
-slideUpBtn.addEventListener("click", slideUp);
-
-function slideDown(e) {
-  e.preventDefault();
-  slideContent.classList.add("slide-down");
-  slideContent.classList.remove("slide-up");
-}
-
-function slideUp(e) {
-  e.preventDefault();
-  slideContent.classList.add("slide-up");
-  slideContent.classList.remove("slide-down");
-}
-
-var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
-    url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
-    paramName: "file", // The name that will be used to transfer the file
-    maxFiles: 10,
-    maxFilesize: 10, // MB
-    addRemoveLinks: true,
-    accept: function(file, done) {
-        if (file.name == "wow.jpg") {
-            done("Naha, you don't.");
-        } else {
-            done();
-        }
-    }
-});
   </script>
 
 </body>

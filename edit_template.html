@@ -324,94 +324,99 @@
                     
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Write <a href="#" data-toggle="tooltip" title="This is the title or subject of the FileInvite, for example: Company Information, or Application Documents. This is useful to help you distinguish different invites in the system and what they are for. Note that this subject will be seen by the contact during the process of them returning information to you so it’s a good idea to make it easy to understand."><i class="fa fa-question-circle mr-1" aria-hidden="true"></i></a></label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Message <a href="#" data-toggle="tooltip" title="This is the title or subject of the FileInvite, for example: Company Information, or Application Documents. This is useful to help you distinguish different invites in the system and what they are for. Note that this subject will be seen by the contact during the process of them returning information to you so it’s a good idea to make it easy to understand."><i class="fa fa-question-circle mr-1" aria-hidden="true"></i></a></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6">Hi,
+                                This checklist outlines the documents we need in order to continue. If you can send us all of the following documents by the due date shown that would be great. 
+                                We have loaded this list into our document collection system which will make sending them to us really easy.  Just click on the "Get Started" button to begin.</textarea>
                         </div>
                     </div>
-                    <div class="col-12 additional__wrap">
-                        <button class="accordion-wrap"><strong>AdditionalSettings <i class="nav-icon fas fa-cog ml-1"></i></strong> </button>
-                        <div class="panel-collapse">
-                
-                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="pannel-display">
-                                    <div class="pannel-label">
-                                        <label>Cloud Storage Sync:</label>
-                                    </div>
-        
-                                    <div class="pannel-fields">
-                                        <div class="form-group">
-                                            <select class="form-control select2" style="width: 100%;" onchange="location = this.options[this.selectedIndex].value;" data-width="auto" data-title="Manage entries">
-                                            <option selected="selected"> No Synchronization </option>
-                                            <option value="cloud-setup.html"> Dropbox Setup</option>
-                                            <option value="cloud-setup.html"> Save to google drive</option>
-                                            <option value="cloud-setup.html"> Save to box</option>
-                                            <option value="cloud-setup.html"> Save to ondrive</option>
-                                            <option value="cloud-setup.html"> Save to ondrive Business</option>
-                                            
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="pannel-label">
-                                        <label>Almost Due Reminder:</label>
-                                    </div>
-                                    <div class="pannel-fields">
-                                        <div class="form-group">
-                                            <select class="form-control select2" style="width: 100%;">
-                                            <option selected="selected">One day Before due</option>
-                                            <option>3 days  Before due</option>
-                                            <option>One week  Before due</option>
-                                            <option>Never</option>
-                                            
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="pannel-label">
-                                        <label>Overdue Reminder:</label>
-                                    </div>
-                                    <div class="pannel-fields">
-                                        <div class="form-group">
-                                            <select class="form-control select2" style="width: 100%;">
-                                            <option selected="selected">Every 2 days</option>
-                                            <option selected="selected">Every 4 days</option>
-                                            <option selected="selected">Every 7 days</option>
-                                            <option>Never</option>
-                                            
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="pannel-label">
-                                        <label>Password Protected:</label>
-                                    </div>
-                                    <div class="pannel-fields">
-                                        <div class="form-group">
-                                            <select class="form-control select2" style="width: 100%;">
-                                            <option selected="selected">No</option>
-                                            <option >Yes</option>
-                                           
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="pannel-label">
-                                        <label>Reference ID:</label>
-                                    </div>
-                                    <div class="pannel-fields">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="reference-id" >
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                         </div>
-                                 
-
+                    <div class="container">
+                        <div class="accordion-wrapper">
+                          <div class="acc-head  p-3 rounded-0">
+                            <strong>AdditionalSettings</strong>
+                          </div>
+                          <div class="acc-body rounded-0">
+                            <div class="row">
+                              <div class="col-md-6">
+                                  <div class="pannel-display">
+                                      <div class="pannel-label">
+                                          <label>Cloud Storage Sync:</label>
+                                      </div>
+          
+                                      <div class="pannel-fields">
+                                          <div class="form-group">
+                                              <select class="form-control select2" style="width: 100%;" onchange="location = this.options[this.selectedIndex].value;" data-width="auto" data-title="Manage entries">
+                                              <option selected="selected"> No Synchronization </option>
+                                              <option value="integrations.html"> Dropbox Setup</option>
+                                              <option value="integrations.html"> Save to google drive</option>
+                                              <option value="integrations.html"> Save to box</option>
+                                              <option value="integrations.html"> Save to ondrive</option>
+                                              <option value="integrations.html"> Save to ondrive Business</option>
+                                              
+                                              </select>
+                                          </div>
+                                      </div>
+  
+                                      <div class="pannel-label">
+                                          <label>Almost Due Reminder:</label>
+                                      </div>
+                                      <div class="pannel-fields">
+                                          <div class="form-group">
+                                              <select class="form-control select2" style="width: 100%;">
+                                              <option selected="selected">One day Before due</option>
+                                              <option>3 days  Before due</option>
+                                              <option>One week  Before due</option>
+                                              <option>Never</option>
+                                              
+                                              </select>
+                                          </div>
+                                      </div>
+  
+                                      <div class="pannel-label">
+                                          <label>Overdue Reminder:</label>
+                                      </div>
+                                      <div class="pannel-fields">
+                                          <div class="form-group">
+                                              <select class="form-control select2" style="width: 100%;">
+                                              <option selected="selected">Every 2 days</option>
+                                              <option selected="selected">Every 4 days</option>
+                                              <option selected="selected">Every 7 days</option>
+                                              <option>Never</option>
+                                              
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="pannel-label">
+                                          <label>Password Protected:</label>
+                                      </div>
+                                      <div class="pannel-fields">
+                                          <div class="form-group">
+                                              <select class="form-control select2" style="width: 100%;">
+                                              <option selected="selected">No</option>
+                                              <option >Yes</option>
+                                             
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="pannel-label">
+                                          <label>Reference ID:</label>
+                                      </div>
+                                      <div class="pannel-fields">
+                                          <div class="form-group">
+                                              <input type="text" class="form-control" id="reference-id" >
+                                          </div>
+                                      </div>
+                                   </div>
+                                   
+                              </div>
+                            <div class="col-md-6"><a href="#">Change settings</a></div>
+                           </div>
+                          </div>
                         </div>
-                    </div>
-                    
-    
-        
+                        
+                        
+                      </div>
+      
                 </div>
                 
                 
@@ -443,8 +448,8 @@
                                 </div>
                                 <div class="create__item__block__buttons">
                                     <button  class=" btn-primary" data-target="slide-down"><i class="fas fa-pencil-alt"></i><span class="d-sm-none d-inline ml-5">Edit</span></button>
-                                    <button class=" btn-info"><i class="fa fa-copy"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
-                                    <button class=" btn-danger"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
+                                    <button class=" btn-info"><i class="fa fa-copy" data-toggle="modal" data-target="#copyModal"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
+                                    <button class=" btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
                                 </div>
                                </div>
                                <div class="" data-target="slide-content">
@@ -520,24 +525,19 @@
                                         </form>
                                         </div>
                                     </div>
-                                    <div class="additional__wrap mb-4">
-                                        <button class="accordion-wrap"><strong>AdditionalSettings <i class="nav-icon fas fa-cog ml-1"></i></strong> </button>
-                                        <div class="panel-collapse">
-                                
-                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="pannel-display">
-                                                  <div class="d-flex">
-                                                    <div class="pannel-one">Automatic TFN Redaction *BETA*</div>
-                                                    <div class="pannel-one">Your country must be set as Australia and have the Mortgage Addon to use this functionality</div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                         </div>
-                                                 
-                
+                                    <div class="accordion-wrapper">
+                                        <div class="acc-head  p-3 rounded-0">
+                                          <strong>AdditionalSettings</strong>
                                         </div>
-                                    </div>
+                                        <div class="acc-body rounded-0">
+                                          <div class="col-md-8">
+                                            <div class="d-flex">
+                                              <div class="pannel-one">Automatic TFN Redaction *BETA*</div>
+                                              <div class="pannel-one">Your country must be set as Australia and have the Mortgage Addon to use this functionality</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                  <button class="btn btn-primary" type="submit" data-target="slide-up">Cancel</button>
                                  <button class="btn btn-warning" type="submit">Save</button>
                                 </div>
@@ -556,8 +556,8 @@
                                  </div>
                                  <div class="create__item__block__buttons">
                                     <button  class=" btn-primary" data-target="slide-down"><i class="fas fa-pencil-alt"></i><span class="d-sm-none d-inline ml-5">Edit</span></button>
-                                    <button class=" btn-info"><i class="fa fa-copy"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
-                                    <button class=" btn-danger"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
+                                    <button class=" btn-info" data-toggle="modal" data-target="#copyModal"><i class="fa fa-copy"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
+                                    <button class=" btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
                                 </div>
                                 </div>
 
@@ -587,7 +587,7 @@
                             <!---item--2-->
 
                           </div>
-                          <div class="float-right mt-4"> <a href="#" class="btn btn-primary"> Create request</a></div>
+                          <div class="float-right mt-4"> <a href="create__template.html" class="btn btn-primary"> Create request</a></div>
                          
                       </div>
                         
@@ -610,6 +610,52 @@
    
     
     <!--second card END -->
+    <!---modal copy poup start-->
+    <div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Copy Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label>Choose a name for the request copy.</label>
+              <div class="form-group">
+                <input type="text" class="form-control" id="reference-id" value="Driver's License - copy" placeholder="Drivers request">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Copy Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal copy poup end-->
+    <!---modal delete poup start-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Remove Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to remove this request from the invite? This action can't be undone.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal copy poup end-->
             
         </div><!-- /.container-fluid -->
         
@@ -641,7 +687,7 @@
 <script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 <script src="plugins/dropzone/min/dropzone.min.js"></script>
 <script src="dist/js/script.js"></script>
-
+<script src="dist/js/adminlte.js"></script>
 <script>
     $(function () {
       $('.select2').select2()
@@ -700,6 +746,12 @@ var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
         }
     }
 });
+$(document).ready(function(){
+  $('.acc-head').click(function(){
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('active');
+  })
+})
   </script>
 
 </body>
