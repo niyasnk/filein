@@ -634,6 +634,9 @@ table p {
   .preview_icons .preview_body .preview_points {
     padding: 15px 18px;
   }
+  .pannel-fields .label-users {
+    margin-top: 0 !important;
+  }
 }
 .card-body .fa {
   font-size: 16px;
@@ -862,4 +865,43 @@ table p {
   background: #ddd;
   padding: 10px 15px;
   margin-bottom: 10px;
+}
+
+.pannel-fields .label-users {
+  position: relative;
+  margin-top: -25px;
+}
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
 }/*# sourceMappingURL=main.css.map */

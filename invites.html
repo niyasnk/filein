@@ -9,22 +9,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <link rel="stylesheet" href="./build/scss/main.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+ 
+  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -173,7 +166,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#/" class="nav-link">
               <i class="nav-icon fas fa-align-left"></i>
               <p>
                 Templates
@@ -182,7 +175,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="Templates.html" class="nav-link">
                   <i class="fas fa-align-right nav-icon"></i>
                   <p>Templates</p>
                 </a>
@@ -284,7 +277,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-4">
           <div class="col-sm-6">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="contacts.html">Home</a></li>
@@ -310,9 +303,8 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-sm-8">
-                <div class="row">
-                
+            <div class="col-sm-12">
+              <div class="row">
                 <div class="col-sm-4">
                     <form action="#">
                         <div class="input-group">
@@ -325,6 +317,24 @@
                         </div>
                     </form>
                 </div>
+                <div class="col-sm-4">
+                  <div class="pannel-fields">
+                    <div class="label-users"><small>Users</small></div>
+                    <div class="form-group">
+                        <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">All Users</option>
+                        <option>Myself</option>
+                        </select>
+                    </div>
+                </div>
+                
+              </div>
+              <div class="col-sm-2">
+                <div class="form-check mt-1">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  Include Posted </div>
+
+              </div>
             </div>
         </div>
         <div class="card m-2">
@@ -352,23 +362,23 @@
                           <th style="width: 10%">
                               Status
                           </th>
-                          <th style="width: 10%">
+                          <th style="width: 15%">
                              User
                           </th>
-                          <th style="width: 5%">
+                          <th style="width: 8%">
                             REF ID
                          </th>
                           
-                          <th style="width: 8%" class="text-center">
+                          <th style="width: 12%" class="text-center">
                               Latest Activity
                           </th>
-                          <th style="width: 8%" class="text-center">
+                          <th style="width: 12%" class="text-center">
                             Created
                         </th>
-                        <th style="width: 8%" class="text-center">
+                        <th style="width: 12%" class="text-center">
                             Due
                         </th>
-                          <th style="width: 20%">
+                          <th style="width: 10%">
                           </th>
                       </tr>
                   </thead>
@@ -591,6 +601,8 @@
               
             </div>
             <!-- /.card-body -->
+
+            
             
           </div>
         
@@ -622,7 +634,17 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <script src="dist/js/adminlte.js"></script>
+<script>
+  $(function () {
+      $('.select2').select2()
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+    })
+</script>
 </body>
 </html>
