@@ -904,4 +904,113 @@ table p {
 
 #checkboxes label:hover {
   background-color: #1e90ff;
+}
+
+.card .card-header .nav-item .active {
+  font-weight: bold;
+}
+
+.invite__wrapper .user__board {
+  width: 100%;
+  background: #86a3bf;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.invite__wrapper .user__board small {
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  padding: 2px 16px;
+  border-radius: 8px;
+  position: relative;
+  bottom: 4px;
+}
+.invite__wrapper .invite-warning {
+  background-color: #cdbe92;
+}
+
+.invite__forms {
+  margin-top: 30px;
+}
+
+.invite-contact__wrap {
+  border: 1px solid #ddd;
+  min-height: 120px;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+.invite-contact__wrap .invite__img {
+  text-align: center;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #3a2e2e !important;
+}
+
+.invite__wrapper {
+  display: flex;
+  width: 100%;
+}
+.invite__wrapper .invite__item {
+  width: 40%;
+  background: #efeded;
+  border: 1px solid;
+  padding: 20px;
+  text-align: center;
+  margin: 0 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .preview_icons {
+    width: 100%;
+    flex-direction: row;
+  }
+  .preview_icons .preview_links ul {
+    padding: 0;
+    margin: 0;
+    background: #a99c9c;
+    padding: 20px;
+  }
+  .preview_icons .preview_links ul li {
+    list-style: none;
+    width: 75px;
+    text-align: center;
+  }
+  .preview_icons .preview_links ul li::not(3) {
+    padding-bottom: 20px;
+  }
+  .preview_icons .preview_links ul li a {
+    text-decoration: none;
+    color: #293038;
+    font-weight: 600;
+  }
+  .preview_icons .preview_links ul li a .fa {
+    font-size: 30px;
+    color: #282a2e;
+  }
+  .preview_icons .preview_body {
+    width: 60%;
+  }
+  .preview_icons .preview_body .preview_headlines {
+    background: #bdc1c8;
+    padding: 15px 18px;
+  }
+  .preview_icons .preview_body .preview_headlines h2 {
+    font-size: 20px;
+  }
+  .preview_icons .preview_body .preview_points {
+    padding: 15px 18px;
+  }
+  .pannel-fields .label-users {
+    margin-top: 0 !important;
+  }
+}
+@media (min-width: 767px) {
+  .invite__wrapper {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=main.css.map */

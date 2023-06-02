@@ -6,6 +6,7 @@
   <title>fileinvite | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="build/scss/main.css">
@@ -24,8 +25,11 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -298,11 +302,1078 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-       <div class="card">
-        <div class="card-body">
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Create Invite</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <h5>How would you like to create your new invite?</h5>
+                     <div class="invite__wrapper" >
+
+                      <div class="invite__item" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">
+                        <span>Create  a Blank</span>
+                        <b>Invite</b>
+
+                      </div>
+                      <div class="invite__item" >
+                        <span>Create  From</span>
+                        <b> Template</b>
+                      </div>
+                     </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+          <div class="col-12">
+            <div class="card card-primary card-outline card-outline-tabs">
+              <div class="card-header p-0 border-bottom-0">
+                <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">1. Setup</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">2. Contacts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#custom-tabs-four-messages" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">3. Requests</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill" href="#custom-tabs-four-settings" role="tab" aria-controls="custom-tabs-four-settings" aria-selected="false">4. Review</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body invite__wrapper">
+                <div class="tab-content" id="custom-tabs-four-tabContent invite_collapse">
+                  <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                    <div class="alert invite-warning alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      You have 3 remaining invites on your plan. You should consider <a href="plan_upgrade.html">upgrading</a> soon.
+                    </div>
+                    <h4 class="m-0">1. Setup your invite</h4>
+                    <div class="user__board">
+                      <small>Send as</small>
+                      <div class="email__boards"><span>JD</span>John Doe    (jogndoe@gmail.com)</div>
+                    </div>
+                    <div class="invite__forms">
+                      <form>
+                        <div class="row d-flex justify-content-between">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Invite Name *</label>
+                              <input type="text" class="form-control" id="name-invite" placeholder="Enter Invite Name*">
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                           
+                              <label>Due date *</label>
+                              <input type="text" class="form-control" id="datepicker" placeholder="Enter Due date*">
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Messages *</label>
+                              <textarea class="form-control" id="invite-message" rows="4" placeholder="Write a personal message to your contact(s). Displayed on their portal and the email sent with this Invite."></textarea>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="invite__btns">
+                              <button type="submit" class="btn btn-default" >CANCEL</button>
+                              <button type="submit" class="btn btn-primary" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">NEXT</button>
+                            </div>
+                          </div>
+                        
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                    <div class="alert invite-warning alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      You have 3 remaining invites on your plan. You should consider <a href="plan_upgrade.html">upgrading</a> soon.
+                    </div>
+                    <h4 class="m-0">2. Add Contacts</h4>
+                    
+                    <div class="invite__forms">
+                      <form>
+                        <div class="row d-flex justify-content-between">
+                          <div class="col-sm-8">
+                            <div class="input-group">
+                              <input type="search" class="form-control form-control-md" placeholder="Search">
+                              <div class="input-group-append">
+                                  <button type="submit" class="btn btn-md btn-default">
+                                      <i class="fa fa-search"></i>
+                                  </button>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#inviteModalLong">Create Contact</button>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="invite-contact__wrap" data-toggle="modal" data-target="#inviteModalLong">
+                              <div class="invite__img"> <img src="dist/img/add-contacts.svg"></div>
+                    
+                           </div>  
+
+                           <!-- here i have  added conatct peoples ui listing currently empty  the below image will show, 
+                            if its registred the down table will display please apply conditions  -->
+                           <!-- <div class="invite-tables mt-4">
+                            <table class="table table-bordered ">
+                              <thead>
+                                <tr class="text-center">
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Email</th>
+                                  <th scope="col">Actions</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="text-center">
+                                  <td>John Doe</td>
+                                  <td>Otto</td>
+                                  <td class="project-actions text-center">
+                                    
+                                    <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#inviteModalLong">
+                                        <i class="fas fa-copy">
+                                        </i>
+                                        Edit
+                                    </a>
+                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModalInvite">
+                                      <i class="fas fa-trash">
+                                      </i>
+                                      Delete
+                                  </button>
+                                  </td>
+                                </tr>
+                               
+                              </tbody>
+                            </table>
+                           </div> -->
+
+                         <!--delete modal popup-->
+                           <div class="modal fade" id="deleteModalInvite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="CopyModalLabel">Remove Request</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p>Are you sure you want to remove this request from the invite? This action can't be undone.</p>
+                                  
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                  <button type="button" class="btn btn-danger">Remove</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+                          <!--delete modal-->
+                          </div>
+                         
+                          
+                          <div class="col-sm-12 mt-4">
+                            <div class="invite__btns">
+                              <button type="button" class="btn btn-default" >CANCEL</button>
+                              <button type="button" class="btn btn-primary" >NEXT</button>
+                            </div>
+                          </div>
+                        
+                        </div>
+                      </form>
+                    </div>
+                    
+        <!-- Modal --> <div class="modal fade" id="inviteModalLong" tabindex="-1" role="dialog" aria-labelledby="inviteModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="inviteModalLongTitle"><b>Create Contact</b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                             <!--form starts-->
+                             <div class="d-flex">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="first-name">First name *</label>
+                                      <input type="text" class="form-control" id="name-first" placeholder="Enter First name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="last-name">Last name *</label>
+                                    <input type="text" class="form-control" id="name-last" placeholder="Enter Last name">
+                                  </div>
+                                </div>
+                             </div>
+                             <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="invite_email" placeholder="Enter Your Email Address">
+                              </div>
+                            </div>
+                          
+                              <div class="d-flex">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                      <label for="first-name">Phone *</label>
+                                      <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="Phone-Contact" >
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="last-name">Code</label>
+                                    <input type="text" class="form-control" id="code" placeholder="Enter otp">
+                                  </div>
+                                </div>
+                             </div>
+                          
+                             <!--form ends-->
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-default" >Save and create another</button>
+                              <button type="button" class="btn btn-warning">Save and close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--modal end-->
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                    <div class="alert invite-warning alert-dismissible mb-3">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      You have 3 remaining invites on your plan. You should consider <a href="plan_upgrade.html">upgrading</a> soon.
+                    </div>
+                   
+                    <div class="d-flex">
+                      <div class="col-md-6">
+                        <h4 class="m-0">3. Request information or documents</h4>
+                      </div>
+                      <div class="col-md-6 ">
+                        <button type="button" class="btn btn-default mr-2" data-toggle="modal" data-target="#modal-xl">Load from templates</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">Create requests</button>
+                      </div>
+                   </div>
+                   <div class="col-md-12 mt-4">
+                    <div class="invite-contact__wrap" data-toggle="modal" data-target="#inviteModalLong">
+                      <div class="invite__img"> <img src="dist/img/create-request.svg"></div>
+                   <p class="text-center">Click here to request a piece of information or documents from your contacts.</p>
+                   </div>  
+                   <div class="col-sm-12 mt-4">
+                    <div class="invite__btns">
+                      <button type="button" class="btn btn-default" >CANCEL</button>
+                      <button type="button" class="btn btn-primary" >NEXT</button>
+                    </div>
+                  </div>
+
+                   <!--large modal-->
+                   <div class="modal fade" id="modal-xl">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title"><b>Load Templates</b></h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                       <div class="p-4 pb-0">
+                        <strong>Select the templates/requests you want to add to your invite from the list below</strong>
+                       </div>
+                        <!-- /.content-header -->
+                    
+                        <!-- Main content -->
+                        <section class="content">
+                            <div class="container-fluid">
+                              <div class="">
+                                <div class="card-header">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <form action="#">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control form-control-md" placeholder="Search">
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="btn btn-md btn-default">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                       
+                                        
+                                    </div>
+                                  </div>
+                    
+                                    <!-- Demo header-->
+                    <div class="py-4 header">
+                        <div class="container py-2">
+                           
+                            <div class="row">
+                                <div class="col-md-3 nav-pills-wrap">
+                                    <!-- Tabs nav -->
+                                    <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link mb-2 p-2  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                            <i class="fa fa-user-circle-o mr-2"></i>
+                                            <span class="font-weight-bold  text-uppercase"><i class="fas fa-user mr-3"></i>Mine</span></a>
+                    
+                                        <a class="nav-link mb-2 p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                            <i class="fa fa-calendar-minus-o mr-2"></i>
+                                            <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Shared</span></a>
+                    
+                                        <a class="nav-link mb-2 p-2 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                            <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Fileinvite</span></a>
+                    
+                                        </div>
+                                </div>
+                    
+                    
+                                <div class="col-md-6 tab-content__wrapper">
+                                    <!-- Tabs content -->
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade  rounded  show active p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                           <div class="template__wrapper">
+                                                <div class="template__desc">
+                                                    <i class="fas fa-align-left"></i>
+                                                    <strong>Sample - Identification Documents</strong><br/>
+                                                    <small>2023-05-23</small>
+                                                </div>
+                                                <div class="template__actions">
+                                                    <div class="project-actions text-center">
+                                                      <a class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-plus"></i> add
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                    
+                                                 <div class="template__wrapper">
+                                                    <div class="template__desc">
+                                                        <i class="fas fa-align-left"></i>
+                                                        <strong>Sample - Identification Documents</strong><br/>
+                                                        <small>2023-05-23</small>
+                                                    </div>
+                                                    <div class="template__actions">
+                                                        <div class="project-actions text-center">
+                                                          <a class="btn btn-primary btn-sm">
+                                                            <i class="fas fa-plus"></i> add
+                                                        </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                       <div class="template__wrapper">
+                                          <div class="template__desc">
+                                              <i class="fas fa-align-left"></i>
+                                              <strong>Sample - Identification Documents</strong><br/>
+                                              <small>2023-05-23</small>
+                                          </div>
+                                          <div class="template__actions">
+                                              <div class="project-actions text-center">
+                                                <a class="btn btn-primary btn-sm">
+                                                  <i class="fas fa-plus"></i> add
+                                              </a>
+                                              </div>
+                                          </div>
+                                      </div>
+                    
+                                   <div class="template__wrapper">
+                                            <div class="template__desc">
+                                                <i class="fas fa-align-left"></i>
+                                                <strong>Sample - Identification Documents</strong><br/>
+                                                <small>2023-05-23</small>
+                                            </div>
+                                            <div class="template__actions">
+                                                <div class="project-actions text-center">
+                                                  <a class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-plus"></i> add
+                                                </a>
+                                                </div>
+                                            </div>
+                                     </div>
+                                        </div>
+                                        
+                                        <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                            <div class="template__wrapper">
+                                                <div class="template__desc">
+                                                    <i class="fas fa-align-left"></i>
+                                                    <strong>Sample - Identification Documents</strong><br/>
+                                                    <small>2023-05-23</small>
+                                                </div>
+                                                <div class="template__actions">
+                                                    <div class="project-actions text-center">
+                                                      <a class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-plus"></i> add
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                       </div>  
+                                        </div>
+                                        
+                                        <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                            <div class="template__wrapper">
+                                                <div class="template__desc">
+                                                    <i class="fas fa-align-left"></i>
+                                                    <strong>Sample - Identification Documents</strong><br/>
+                                                    <small>2023-05-23</small>
+                                                </div>
+                                                <div class="template__actions">
+                                                    <div class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm">
+                                                            <i class="fas fa-plus"></i> add
+                                                        </a>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-3 nav-pills-wrap">
+                              <!-- Tabs nav -->
+                              <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                  <h4>Selected Templates</h4>
+              
+                                  </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                           
+                              </div>
+
+                                
+                                
+                            </div><!-- /.container-fluid -->
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          <button type="button" class="btn btn-primary">Load From templates</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                   <!--large modal end-->
+
+                   <!--medium modal-->
+                   <div class="modal fade" id="modal-lg">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Create Request</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                      <div class="modal-body">
+                        <div class="d-flex">
+                            <div class="col-md-8">
+                            <div class="form-group">
+                              <label for="first-name">Request Title *</label>
+                              <input type="text" id="request-title" class="form-control" placeholder="Request Title" name="request-title" >
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="last-name">Request Type</label>
+                                <select class="form-select" aria-label="Default select example">
+                                  <option selected>Open this select menu</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                          
+                            <div class="form-group">
+                              <label for="first-name">Request Type</label>
+                              <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                <option value="selected">Everyone</option>
+                              
+                                <option>test</option>
+                              </select>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col-md-12 mb-4">
+                            <textarea id="summernote">
+                              Place <em>some</em> <u>text</u> <strong>here</strong>
+                            </textarea>
+                          </div>
+                          <div class="col-md-12">
+                            <form class="form" action="#" method="post">
+                              <!--begin::Input group-->
+                              <div class="fv-row">
+                                  <!--begin::Dropzone-->
+                                  <div class="dropzone" id="kt_dropzonejs_example_1">
+                                      <!--begin::Message-->
+                                      <div class="dz-message needsclick">
+                                          <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
+
+                                          <!--begin::Info-->
+                                          <div class="ms-4">
+                                              <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload OR <br/><a href="#">Click to Upload</a></h3>
+                                          
+                                          </div>
+                                          <!--end::Info-->
+                                      </div>
+                                  </div>
+                                  <!--end::Dropzone-->
+                              </div>
+                              <!--end::Input group-->
+                          </form>
+                          </div>
+                          <div class="col-md-12 mt-4">
+                          <div class="accordion-wrapper">
+                            <div class="acc-head  p-3 rounded-0">
+                              <strong>AdditionalSettings</strong>
+                            </div>
+                            <div class="acc-body rounded-0">
+                              <div class="col-md-10">
+                                <div class="d-flex">
+                                  <div class="pannel-one col-md-3"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Individual response</div>
+                                  <div class="pannel-one col-md-7">Only one person needs to submit information for this request to be considered returned by all assigned contacts.</div>
+                                </div>
+                                <div class="d-flex">
+                                  <div class="pannel-one  col-md-3"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Individual response</div>
+                                  <div class="pannel-one col-md-7">Only one person needs to submit information for this request to be considered returned by all assigned contacts.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                       
+                         <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-default">Save and create another</button>
+                              <button type="button" class="btn btn-warning">Save and close</button>
+                            </div>
+                       </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                   <!--medium modal ends-->
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+                    <div class="alert invite-warning alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      You have 3 remaining invites on your plan. You should consider <a href="plan_upgrade.html">upgrading</a> soon.
+                    </div>
+                    <h4 class="m-0">4. Review your Invite</h4>
+
+                    <div class="invite__title mt-3" style="color:grey;"><h4>Invite Title</h4></div>
+                    <div class="user__board">
+                      <small>Send as</small>
+                      <div class="email__boards"><span>JD</span>John Doe    (jogndoe@gmail.com)</div>
+                    </div>
+                    <div class="invite__forms">
+                      <form>
+                        <div class="row d-flex justify-content-between">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Invite Name *</label>
+                              <input type="text" class="form-control" id="name-invite" placeholder="Enter Invite Name*">
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                           
+                              <label>Due date *</label>
+                              <input type="text" class="form-control" id="datepicker" placeholder="Enter Due date*">
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Messages *</label>
+                              <textarea class="form-control" id="invite-message" rows="4" placeholder="Write a personal message to your contact(s). Displayed on their portal and the email sent with this Invite."></textarea>
+                            </div>
+                          </div>
+      
+                        </div>
+                      </form>
+                    </div>
+                  <div class="d-flex mt-2">
+                    <div class="col-md-4">
+                      <div class="invite__title" style="color:grey;"><h4>Contacts</h4></div>
+                    </div>
+                    <div class="col-md-8">
+                      <button type="button" class="btn btn-default mr-2" data-toggle="modal" data-target="#CopyModalContacts"> <i class="fa fa-search mr-2"></i>Look up contacts</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#inviteModalContact">Create requests</button>
+                    </div>
+                 </div>
+                 
+                   <div class="invite__forms">
+                          <div class="invite-contact__wrap" data-toggle="modal" data-target="#inviteModalContact">
+                            <div class="invite__img"> <img src="dist/img/add-contacts.svg"></div>
+                            <p class="pt-2 text-center">Click here to add the contacts you want to send to</p>
+                        </div>
+                  </div>
+                  
+      <!-- Modal --> <div class="modal fade" id="inviteModalContact" tabindex="-1" role="dialog" aria-labelledby="inviteModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="inviteModalLongTitle"><b>Create Contact</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                           <!--form starts-->
+                           <div class="d-flex">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="first-name">First name *</label>
+                                    <input type="text" class="form-control" id="name-first" placeholder="Enter First name">
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="last-name">Last name *</label>
+                                  <input type="text" class="form-control" id="name-last" placeholder="Enter Last name">
+                                </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                            <div class="form-group">
+                              <label for="email">Email *</label>
+                              <input type="email" class="form-control" id="invite_email" placeholder="Enter Your Email Address">
+                            </div>
+                          </div>
+                        
+                            <div class="d-flex">
+                              <div class="col-md-8">
+                                  <div class="form-group">
+                                    <label for="first-name">Phone *</label>
+                                    <input type="text" id="mobile_codes" class="form-control" placeholder="Phone Number" name="Phone-Contact" >
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="last-name">Code</label>
+                                  <input type="text" class="form-control" id="code" placeholder="Enter otp">
+                                </div>
+                              </div>
+                           </div>
+                        
+                           <!--form ends-->
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" >Save and create another</button>
+                            <button type="button" class="btn btn-warning">Save and close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--modal end-->
+
+                    <!--delete modal popup-->
+                    <div class="modal fade" id="CopyModalContacts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="CopyModalLabel">Look up Contacts</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                            
+                              <form action="#">
+                                <div class="input-group">
+                                    <input type="search" class="form-control form-control-md" placeholder="Search Contacts">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-md btn-default">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" >Save and create another</button>
+                            <button type="button" class="btn btn-warning">Save and close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <!--delete modal-->
+                  <!--create template starts-->
+                  <!-- <div class="d-flex">
+                    <div class="col-md-6">
+                      <h4 class="mt-4">3. Request information or documents</h4>
+                    </div>
+                    <div class="col-md-6 ">
+                      <button type="button" class="btn btn-default mr-2" data-toggle="modal" data-target="#modal-xl">Load from templates</button>
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">Create requests</button>
+                    </div>
+                 </div> -->
+                 <div class="d-flex mt-4">
+                  <div class="col-md-4">
+                    <div class="invite__title" style="color:grey;"><h4>Requests</h4></div>
+                  </div>
+                  <div class="col-md-8">
+                    <button type="button" class="btn btn-default mr-2" data-toggle="modal" data-target="#modalTemplates">Load Templates</button>
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalRequests">Create requests</button>
+                  </div>
+               </div>
+                 <div class="col-md-12 mt-4">
+                  <div class="invite-contact__wrap" data-toggle="modal" data-target="#inviteModalLong">
+                    <div class="invite__img"> <img src="dist/img/create-request.svg"></div>
+                 <p class="text-center">Click here to request a piece of information or documents from your contacts.</p>
+                 </div>  
+                
+                 <!--large modal-->
+                 <div class="modal fade" id="modalTemplates">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title"><b>Load Templates</b></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                     <div class="p-4 pb-0">
+                      <strong>Select the templates/requests you want to add to your invite from the list below</strong>
+                     </div>
+                      <!-- /.content-header -->
+                  
+                      <!-- Main content -->
+                      <section class="content">
+                          <div class="container-fluid">
+                            <div class="">
+                              <div class="card-header">
+                                  
+                                  <div class="row">
+                                      <div class="col-md-8">
+                                          <form action="#">
+                                              <div class="input-group">
+                                                  <input type="search" class="form-control form-control-md" placeholder="Search">
+                                                  <div class="input-group-append">
+                                                      <button type="submit" class="btn btn-md btn-default">
+                                                          <i class="fa fa-search"></i>
+                                                      </button>
+                                                  </div>
+                                              </div>
+                                          </form>
+                                      </div>
+                                     
+                                      
+                                  </div>
+                                </div>
+                  
+                                  <!-- Demo header-->
+                  <div class="py-4 header">
+                      <div class="container py-2">
+                         
+                          <div class="row">
+                              <div class="col-md-3 nav-pills-wrap">
+                                  <!-- Tabs nav -->
+                                  <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                      <a class="nav-link mb-2 p-2  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                          <i class="fa fa-user-circle-o mr-2"></i>
+                                          <span class="font-weight-bold  text-uppercase"><i class="fas fa-user mr-3"></i>Mine</span></a>
+                  
+                                      <a class="nav-link mb-2 p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                          <i class="fa fa-calendar-minus-o mr-2"></i>
+                                          <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Shared</span></a>
+                  
+                                      <a class="nav-link mb-2 p-2 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                          <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Fileinvite</span></a>
+                  
+                                      </div>
+                              </div>
+                  
+                  
+                              <div class="col-md-6 tab-content__wrapper">
+                                  <!-- Tabs content -->
+                                  <div class="tab-content" id="v-pills-tabContent">
+                                      <div class="tab-pane fade  rounded  show active p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                         <div class="template__wrapper">
+                                              <div class="template__desc">
+                                                  <i class="fas fa-align-left"></i>
+                                                  <strong>Sample - Identification Documents</strong><br/>
+                                                  <small>2023-05-23</small>
+                                              </div>
+                                              <div class="template__actions">
+                                                  <div class="project-actions text-center">
+                                                    <a class="btn btn-primary btn-sm">
+                                                      <i class="fas fa-plus"></i> add
+                                                  </a>
+                                                  </div>
+                                              </div>
+                                         </div>
+                  
+                                               <div class="template__wrapper">
+                                                  <div class="template__desc">
+                                                      <i class="fas fa-align-left"></i>
+                                                      <strong>Sample - Identification Documents</strong><br/>
+                                                      <small>2023-05-23</small>
+                                                  </div>
+                                                  <div class="template__actions">
+                                                      <div class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm">
+                                                          <i class="fas fa-plus"></i> add
+                                                      </a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                  
+                                     <div class="template__wrapper">
+                                        <div class="template__desc">
+                                            <i class="fas fa-align-left"></i>
+                                            <strong>Sample - Identification Documents</strong><br/>
+                                            <small>2023-05-23</small>
+                                        </div>
+                                        <div class="template__actions">
+                                            <div class="project-actions text-center">
+                                              <a class="btn btn-primary btn-sm">
+                                                <i class="fas fa-plus"></i> add
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                  
+                                 <div class="template__wrapper">
+                                          <div class="template__desc">
+                                              <i class="fas fa-align-left"></i>
+                                              <strong>Sample - Identification Documents</strong><br/>
+                                              <small>2023-05-23</small>
+                                          </div>
+                                          <div class="template__actions">
+                                              <div class="project-actions text-center">
+                                                <a class="btn btn-primary btn-sm">
+                                                  <i class="fas fa-plus"></i> add
+                                              </a>
+                                              </div>
+                                          </div>
+                                   </div>
+                                      </div>
+                                      
+                                      <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                          <div class="template__wrapper">
+                                              <div class="template__desc">
+                                                  <i class="fas fa-align-left"></i>
+                                                  <strong>Sample - Identification Documents</strong><br/>
+                                                  <small>2023-05-23</small>
+                                              </div>
+                                              <div class="template__actions">
+                                                  <div class="project-actions text-center">
+                                                    <a class="btn btn-primary btn-sm">
+                                                      <i class="fas fa-plus"></i> add
+                                                  </a>
+                                                  </div>
+                                              </div>
+                                     </div>  
+                                      </div>
+                                      
+                                      <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                          <div class="template__wrapper">
+                                              <div class="template__desc">
+                                                  <i class="fas fa-align-left"></i>
+                                                  <strong>Sample - Identification Documents</strong><br/>
+                                                  <small>2023-05-23</small>
+                                              </div>
+                                              <div class="template__actions">
+                                                  <div class="project-actions text-center">
+                                                      <a class="btn btn-primary btn-sm">
+                                                          <i class="fas fa-plus"></i> add
+                                                      </a>
+                                                     
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                              </div>
+                              
+                          </div>
+                          <div class="col-md-3 nav-pills-wrap">
+                            <!-- Tabs nav -->
+                            <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <h4>Selected Templates</h4>
+            
+                                </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+                         
+                            </div>
+
+                              
+                              
+                          </div><!-- /.container-fluid -->
+                      </div>
+                      <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Load From templates</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+                 <!--large modal end-->
+
+                 <!--medium modal-->
+                 <div class="modal fade" id="modalRequests">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Create Request</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    <div class="modal-body">
+                      <div class="d-flex">
+                          <div class="col-md-8">
+                          <div class="form-group">
+                            <label for="first-name">Request Title *</label>
+                            <input type="text" id="request-title" class="form-control" placeholder="Request Title" name="request-title" >
+                          </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="last-name">Request Type</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                        
+                          <div class="form-group">
+                            <label for="first-name">Request Type</label>
+                            <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                              <option value="selected">Everyone</option>
+                            
+                              <option>test</option>
+                            </select>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                          <textarea id="summernote">
+                            Place <em>some</em> <u>text</u> <strong>here</strong>
+                          </textarea>
+                        </div>
+                        <div class="col-md-12">
+                          <form class="form" action="#" method="post">
+                            <!--begin::Input group-->
+                            <div class="fv-row">
+                                <!--begin::Dropzone-->
+                                <div class="dropzone" id="kt_dropzonejs_example_1">
+                                    <!--begin::Message-->
+                                    <div class="dz-message needsclick">
+                                        <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
+
+                                        <!--begin::Info-->
+                                        <div class="ms-4">
+                                            <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload OR <br/><a href="#">Click to Upload</a></h3>
+                                        
+                                        </div>
+                                        <!--end::Info-->
+                                    </div>
+                                </div>
+                                <!--end::Dropzone-->
+                            </div>
+                            <!--end::Input group-->
+                        </form>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                        <div class="accordion-wrapper">
+                          <div class="acc-head  p-3 rounded-0">
+                            <strong>AdditionalSettings</strong>
+                          </div>
+                          <div class="acc-body rounded-0">
+                            <div class="col-md-10">
+                              <div class="d-flex">
+                                <div class="pannel-one col-md-3"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Individual response</div>
+                                <div class="pannel-one col-md-7">Only one person needs to submit information for this request to be considered returned by all assigned contacts.</div>
+                              </div>
+                              <div class="d-flex">
+                                <div class="pannel-one  col-md-3"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Individual response</div>
+                                <div class="pannel-one col-md-7">Only one person needs to submit information for this request to be considered returned by all assigned contacts.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                     
+                       <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default">Save and create another</button>
+                            <button type="button" class="btn btn-warning">Save and close</button>
+                          </div>
+                     </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+                  <!--create template ends-->
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="invite__title mt-4" style="color:grey;"><h4>Additional Settings</h4></div>
+                    <div class="addional_icons">
+                      <a href="#"><i class="fa fa-pencil-alt mr-2"></i></a>
+                    </div>
+                  </div>
+                  <div class="invite__forms">
+                    <div class="invite-contact__wrap">
+                     <p> <i class="fa fa-envelope mr-2"></i>Almost Due Reminder: 1 day before due</p>
+                     <p> <i class="fa fa-envelope mr-2"></i>Overdue Reminder: Every 2 days</p>
+                     <p> <i class="fa fa-envelope mr-2"></i>Cloud Storage: Disabled</p>
+                     <p> <i class="fa fa-key mr-2"></i>Password Protected: No</p>
+                     <p> <i class="fa fa-user mr-2"></i>Display User: No User Selected</p>
+                     <p> <i class="fa fa-user mr-2"></i> Notification User: No User Selected</p>
+                    </div>
+                  </div>
+                  <div class="invite__btns d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-default">CANCEL</button>
+                    <button type="submit" class="btn btn-primary" >SAVE DATA</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
          
-        </div>
-       </div> 
+        
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -329,10 +1400,78 @@
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <script src="dist/js/adminlte.js"></script>
-<script></script>
+<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="plugins/dropzone/min/dropzone.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+<script>
+   // -----Country Code Selection
+$("#mobile_code,#mobile_codes").intlTelInput({
+	initialCountry: "in",
+	separateDialCode: true,
+});
+   $(function() {
+$( "#datepicker" ).datepicker();
+});
+$('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+    $('textarea#summernote').summernote({
+        placeholder: 'Hello bootstrap 4',
+        tabsize: 2,
+        height: 100,
+  toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'italic', 'underline', 'clear']],
+        // ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+        //['fontname', ['fontname']],
+       // ['fontsize', ['fontsize']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'hr']],
+        //['view', ['fullscreen', 'codeview']],
+        ['help', ['help']]
+      ],
+      });
+      var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
+    url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
+    paramName: "file", // The name that will be used to transfer the file
+    maxFiles: 10,
+    maxFilesize: 10, // MB
+    addRemoveLinks: true,
+    accept: function(file, done) {
+        if (file.name == "wow.jpg") {
+            done("Naha, you don't.");
+        } else {
+            done();
+        }
+    }
+});
+$(document).ready(function(){
+  $('.acc-head').click(function(){
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('active');
+  })
+})
+$(window).on('load',function(){
+    var delayMs = 1500; // delay in milliseconds
+    
+    setTimeout(function(){
+        $('#myModal').modal('show');
+    }, delayMs);
+});
+</script>
 
 
 </body>
