@@ -315,12 +315,14 @@
                           <h5>How would you like to create your new invite?</h5>
                         <div class="invite__wrapper" >
 
-                          <div class="invite__item" data-dismiss="modal" aria-label="Close">
-                            <span>Create  a Blank</span>
+                          <div class="invite__item" data-dismiss="modal"  data-dismiss="modal">
+                            <img src="dist/img/file-modal.svg" />
+                            <span class="mt-2">Create  a Blank</span>
                             <b>Invite</b>
                           </div>
-                          <div class="invite__item" data-toggle="modal" data-target="#modal-loadtemplate" aria-label="Close">
-                            <span>Create  From</span>
+                          <div class="invite__item" data-toggle="modal" data-dismiss="modal" data-target="#modal-loadtemplate" aria-label="Close">
+                            <img src="dist/img/file-spreadsheet.svg" />
+                            <span class="mt-2">Create  From</span>
                             <b> Template</b>
                           </div>
                         </div>
