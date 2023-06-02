@@ -302,34 +302,221 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h4 class="modal-title">Create Invite</h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <h5>How would you like to create your new invite?</h5>
-                     <div class="invite__wrapper" >
-
-                      <div class="invite__item" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">
-                        <span>Create  a Blank</span>
-                        <b>Invite</b>
-
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Create Invite</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                          </button>
                       </div>
-                      <div class="invite__item" >
-                        <span>Create  From</span>
-                        <b> Template</b>
+                      <div class="modal-body">
+                          <h5>How would you like to create your new invite?</h5>
+                        <div class="invite__wrapper" >
+
+                          <div class="invite__item" data-dismiss="modal" aria-label="Close">
+                            <span>Create  a Blank</span>
+                            <b>Invite</b>
+                          </div>
+                          <div class="invite__item" data-toggle="modal" data-target="#modal-loadtemplate" aria-label="Close">
+                            <span>Create  From</span>
+                            <b> Template</b>
+                          </div>
+                        </div>
                       </div>
-                     </div>
+                      
                   </div>
-                  
               </div>
           </div>
-      </div>
+            <!--large modal-->
+            <div class="modal fade" id="modal-loadtemplate">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title"><b>Load Templates</b></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                 <div class="p-4 pb-0">
+                  <strong>Select the templates/requests you want to add to your invite from the list below</strong>
+                 </div>
+                  <!-- /.content-header -->
+              
+                  <!-- Main content -->
+                  <section class="content">
+                      <div class="container-fluid">
+                        <div class="">
+                          <div class="card-header">
+                              
+                              <div class="row">
+                                  <div class="col-md-8">
+                                      <form action="#">
+                                          <div class="input-group">
+                                              <input type="search" class="form-control form-control-md" placeholder="Search">
+                                              <div class="input-group-append">
+                                                  <button type="submit" class="btn btn-md btn-default">
+                                                      <i class="fa fa-search"></i>
+                                                  </button>
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                                 
+                                  
+                              </div>
+                            </div>
+              
+                              <!-- Demo header-->
+              <div class="py-4 header">
+                  <div class="container py-2">
+                     
+                      <div class="row">
+                          <div class="col-md-3 nav-pills-wrap">
+                              <!-- Tabs nav -->
+                              <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                  <a class="nav-link mb-2 p-2  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                      <i class="fa fa-user-circle-o mr-2"></i>
+                                      <span class="font-weight-bold  text-uppercase"><i class="fas fa-user mr-3"></i>Mine</span></a>
+              
+                                  <a class="nav-link mb-2 p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                      <i class="fa fa-calendar-minus-o mr-2"></i>
+                                      <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Shared</span></a>
+              
+                                  <a class="nav-link mb-2 p-2 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                      <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Fileinvite</span></a>
+              
+                                  </div>
+                          </div>
+              
+              
+                          <div class="col-md-6 tab-content__wrapper">
+                              <!-- Tabs content -->
+                              <div class="tab-content" id="v-pills-tabContent">
+                                  <div class="tab-pane fade  rounded  show active p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                     <div class="template__wrapper">
+                                          <div class="template__desc">
+                                              <i class="fas fa-align-left"></i>
+                                              <strong>Sample - Identification Documents</strong><br/>
+                                              <small>2023-05-23</small>
+                                          </div>
+                                          <div class="template__actions">
+                                              <div class="project-actions text-center">
+                                                <a class="btn btn-primary btn-sm">
+                                                  <i class="fas fa-plus"></i> add
+                                              </a>
+                                              </div>
+                                          </div>
+                                     </div>
+              
+                                 <div class="template__wrapper">
+                                              <div class="template__desc">
+                                                  <i class="fas fa-align-left"></i>
+                                                  <strong>Sample - Identification Documents</strong><br/>
+                                                  <small>2023-05-23</small>
+                                              </div>
+                                              <div class="template__actions">
+                                                  <div class="project-actions text-center">
+                                                    <a class="btn btn-primary btn-sm">
+                                                      <i class="fas fa-plus"></i> add
+                                                  </a>
+                                                  </div>
+                                              </div>
+                                  </div>
+              
+                                  <div class="template__wrapper">
+                                    <div class="template__desc">
+                                        <i class="fas fa-align-left"></i>
+                                        <strong>Sample - Identification Documents</strong><br/>
+                                        <small>2023-05-23</small>
+                                    </div>
+                                    <div class="template__actions">
+                                        <div class="project-actions text-center">
+                                          <a class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus"></i> add
+                                        </a>
+                                        </div>
+                                    </div>
+                                 </div>
+              
+                             <div class="template__wrapper">
+                                      <div class="template__desc">
+                                          <i class="fas fa-align-left"></i>
+                                          <strong>Sample - Identification Documents</strong><br/>
+                                          <small>2023-05-23</small>
+                                      </div>
+                                      <div class="template__actions">
+                                          <div class="project-actions text-center">
+                                            <a class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> add</a>
+                                          </div>
+                                      </div>
+                               </div>
+                                  </div>
+                                  
+                                  <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                      <div class="template__wrapper">
+                                          <div class="template__desc">
+                                              <i class="fas fa-align-left"></i>
+                                              <strong>Sample - Identification Documents</strong><br/>
+                                              <small>2023-05-23</small>
+                                          </div>
+                                          <div class="template__actions">
+                                              <div class="project-actions text-center">
+                                                <a class="btn btn-primary btn-sm">
+                                                  <i class="fas fa-plus"></i> add
+                                              </a>
+                                              </div>
+                                          </div>
+                                       </div>  
+                                  </div>
+                                  
+                                  <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                      <div class="template__wrapper">
+                                          <div class="template__desc">
+                                              <i class="fas fa-align-left"></i>
+                                              <strong>Sample - Identification Documents</strong><br/>
+                                              <small>2023-05-23</small>
+                                          </div>
+                                          <div class="template__actions">
+                                              <div class="project-actions text-center">
+                                                  <a class="btn btn-primary btn-sm">
+                                                      <i class="fas fa-plus"></i> add
+                                                  </a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                          </div>
+                          
+                      </div>
+                      <div class="col-md-3 nav-pills-wrap">
+                        <!-- Tabs nav -->
+                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <h4>Selected Templates</h4>
+        
+                            </div>
+                    </div>
+                  </div>
+              </div>
+              
+                     
+                        </div>
+
+                          
+                          
+                      </div><!-- /.container-fluid -->
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Load From templates</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+             <!--large modal end-->
           <div class="col-12">
             <div class="card card-primary card-outline card-outline-tabs">
               <div class="card-header p-0 border-bottom-0">
@@ -660,7 +847,7 @@
                                                 </div>
                                            </div>
                     
-                                                 <div class="template__wrapper">
+                                       <div class="template__wrapper">
                                                     <div class="template__desc">
                                                         <i class="fas fa-align-left"></i>
                                                         <strong>Sample - Identification Documents</strong><br/>
@@ -673,9 +860,9 @@
                                                         </a>
                                                         </div>
                                                     </div>
-                                                </div>
+                                        </div>
                     
-                                       <div class="template__wrapper">
+                                        <div class="template__wrapper">
                                           <div class="template__desc">
                                               <i class="fas fa-align-left"></i>
                                               <strong>Sample - Identification Documents</strong><br/>
@@ -688,7 +875,7 @@
                                               </a>
                                               </div>
                                           </div>
-                                      </div>
+                                       </div>
                     
                                    <div class="template__wrapper">
                                             <div class="template__desc">
@@ -698,9 +885,7 @@
                                             </div>
                                             <div class="template__actions">
                                                 <div class="project-actions text-center">
-                                                  <a class="btn btn-primary btn-sm">
-                                                    <i class="fas fa-plus"></i> add
-                                                </a>
+                                                  <a class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> add</a>
                                                 </div>
                                             </div>
                                      </div>
@@ -720,7 +905,7 @@
                                                     </a>
                                                     </div>
                                                 </div>
-                                       </div>  
+                                             </div>  
                                         </div>
                                         
                                         <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
@@ -735,7 +920,6 @@
                                                         <a class="btn btn-primary btn-sm">
                                                             <i class="fas fa-plus"></i> add
                                                         </a>
-                                                       
                                                     </div>
                                                 </div>
                                             </div>
