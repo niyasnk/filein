@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fileinvite | Dashboard Template</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="./build/scss/main.css">
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+ 
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav  ml-auto">
+      <li><a href="create_invite.html" class="btn btn-block bg-gradient-warning btn-flat btn-md">Create new invite <i class="ml-4 fas fa-barsfas fa-angle-right"></i></a></li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+    
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                 Logout
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+         
+          
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">FLYWORLD</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="getting-started.html" class="nav-link">
+              <i class="nav-icon fas fa-play-circle"></i>
+              <p>
+                Getting Started
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Dashboard
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invites.html" class="nav-link active">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Invites
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="invites.html" class="nav-link">
+                  <i class="far fa-envelope nav-icon"></i>
+                  <p>Invites</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-align-left"></i>
+              <p>
+                Templates
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="Templates.html" class="nav-link">
+                  <i class="fas fa-align-right nav-icon"></i>
+                  <p>Templates</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Contacts
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item ">
+                <a href="contact.html" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p> Contacts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="company.html" class="nav-link">
+                  <i class="fas fa-building nav-icon"></i>
+                  <p> Companies</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  Settings
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link">
+                    <i class="fa fa-star nav-icon"></i>
+                    <p>Profile</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-wrench nav-icon"></i>
+                  <p>Preferences</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-credit-card nav-icon"></i>
+                  <p>Plans & Billing</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-link nav-icon"></i>
+                  <p>Integrations</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-plug nav-icon"></i>
+                  <p>Widget</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-image nav-icon "></i>
+                  <p>Branding</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-question-circle nav-icon"></i>
+                  <p>Help</p>
+                  <i class="fas fa-angle-right right"></i>
+                </a>
+              </li>
+            </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-8">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item "><a href="invites.html">Invites</a></li>
+                <li class="breadcrumb-item active"><a href="edit_request.html">Sample - Identification Documents</a></li>
+              </ol>
+            <h1 class="m-0">Edit Requests| <span class="text-muted"> Sample - Identification Documents</span></h1>
+          </div><!-- /.col -->
+          
+        </div><!-- /.row -->
+
+        
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+         
+              <div class="card">
+             
+                <div class="card-body">
+                      <div class="card-header pt-2">
+                        <div class="d-flex justify-content-between">
+                            <h4>Edit Requests </h4>
+                            <a href="overview.html#custom-tabs-four-profile" class="btn btn-warning"><i class="mr-4 fa fa-chevron-circle-left fa-lg"></i>Finished editing</a>
+                        </div>
+                       
+                      </div><!-- /.card-header -->
+                      <div class="col-sm-12">
+                        <div class="create__wrapper">
+                            <div class="create__item">
+                                <div class="form-check my-4 ml-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> <span>Select all</span>      
+                                </div>
+                            </div>
+
+                            <div class="create__item__links">
+                               <div class="create__item__block">
+                                <div class="create__item__block__checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">   <strong>Driver's License</strong>  
+                                    </div>
+                                </div>
+                                <div class="create__item__block__uploads">
+                                    <div class="request-attachments-box"><span><i class="fas fa-paperclip"></i> <span class="request-attachments-count">0</span></span> <span><i class="fas fa-pen-nib"></i> <span class="request-signatures-count">0</span></span></div>
+                                </div>
+                                <div class="create__item__block__buttons">
+                                    <button  class=" btn-primary" data-target="slide-down"><i class="fas fa-pencil-alt"></i><span class="d-sm-none d-inline ml-5">Edit</span></button>
+                                    <button class=" btn-info"><i class="fa fa-copy" data-toggle="modal" data-target="#copyModal"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
+                                    <button class=" btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
+                                </div>
+                               </div>
+                               <div class="" data-target="slide-content">
+                                <div class="slide__content mt-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="pannel-fields">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="reference-id" value="Driver's License" placeholder="This is a short title of the individual request for information, for example: Company Logo, or Application Form.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select class="form-control select2" style="width: 100%;">
+                                                <option selected="selected">Regular Request</option>
+                                                <option >Every 4 days</option>
+                                                <option >Every 7 days</option>
+                                                <option>Never</option>
+                                                
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div id="editor" contenteditable="false">
+
+                                                <section id="toolbar">
+                                          
+                                                  <div id="bold" class="icon fas fa-bold"></div>
+                                                  <div id="italic" class="icon fas fa-italic"></div>
+                                                  <div id="underline" class="icon fas fa-underline"></div>
+                                                  <div id="strikeThrough" class="icon fas fa-strikethrough"></div>
+                                                  <div id="createLink" class="icon fas fa-link"></div>
+                                                  <div id="insertUnorderedList" class="icon fas fa-list-ul"></div>
+                                                  <div id="insertOrderedList" class="icon fas fa-list-ol"></div>
+                                                  <div id="justifyLeft" class="icon fas fa-align-left"></div>
+                                                  <div id="justifyRight" class="icon fas fa-align-right"></div>
+                                                  <div id="justifyCenter" class="icon fas fa-align-center"></div>
+                                                  <div id="justifyFull" class="icon fas fa-align-justify"></div>
+                                          
+                                                </section>
+                                          
+                                                <section id="page" contenteditable="true">
+                                          
+                                                  <p id="page-content">Please upload a copy of your current driver's licence</p>
+                                          
+                                                </section>
+                                          
+                                              </div>
+                                        </div>
+                                        <div class="col-md-6 mt-3">
+                                            <!--begin::Form-->
+                                        <form class="form" action="#" method="post">
+                                            <!--begin::Input group-->
+                                            <div class="fv-row">
+                                                <!--begin::Dropzone-->
+                                                <div class="dropzone" id="kt_dropzonejs_example_1">
+                                                    <!--begin::Message-->
+                                                    <div class="dz-message needsclick">
+                                                        <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
+
+                                                        <!--begin::Info-->
+                                                        <div class="ms-4">
+                                                            <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
+                                                        
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                </div>
+                                                <!--end::Dropzone-->
+                                            </div>
+                                            <!--end::Input group-->
+                                        </form>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-wrapper">
+                                        <div class="acc-head  p-3 rounded-0">
+                                          <strong>AdditionalSettings</strong>
+                                        </div>
+                                        <div class="acc-body rounded-0">
+                                          <div class="col-md-8">
+                                            <div class="d-flex">
+                                              <div class="pannel-one">Automatic TFN Redaction *BETA*</div>
+                                              <div class="pannel-one">Your country must be set as Australia and have the Mortgage Addon to use this functionality</div>
+                                            </div>
+                                            
+                                          </div>
+                                          <div class="col-md-8">
+                                            <p class="mt-2"><b>Please select who will receive this request.</b></p>
+                                           
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                                <span for="vehicle1"> Everyone will receive this request</span><br>
+                                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                                <span for="vehicle1"> Everyone will receive this request</span><br>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="invite__options">
+                                                    <p><i class="fas fa-check mr-2"></i>Almost Due Reminder: 1 day before due <a href="#" data-toggle="tooltip" title="This request only needs one person to submit information"><i class="far fa-question-circle mr-2" aria-hidden="true"></i></a></p>
+                                                    <p><i class="fas fa-check mr-2"></i>Overdue Reminder: Every 2 days<a href="#" data-toggle="tooltip" title="Everyone assigned to this request can see the information submitted"><i class="far fa-question-circle mr-2" aria-hidden="true"></i></a></p>
+                                                   
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+                                 <button class="btn btn-primary" type="submit" data-target="slide-up">Cancel</button>
+                                 <button class="btn btn-warning" type="submit">Save</button>
+                                </div>
+                              </div>
+                            </div>
+                            <!---item--2-->
+                            <div class="create__item__links">
+                                <div class="create__item__block">
+                                 <div class="create__item__block__checkbox">
+                                     <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">   <strong>Driver's License</strong>  
+                                     </div>
+                                 </div>
+                                 <div class="create__item__block__uploads">
+                                     <div class="request-attachments-box"><span><i class="fas fa-paperclip"></i> <span class="request-attachments-count">0</span></span> <span><i class="fas fa-pen-nib"></i> <span class="request-signatures-count">0</span></span></div>
+                                 </div>
+                                 <div class="create__item__block__buttons">
+                                    <button  class=" btn-primary" data-target="slide-down"><i class="fas fa-pencil-alt"></i><span class="d-sm-none d-inline ml-5">Edit</span></button>
+                                    <button class=" btn-info" data-toggle="modal" data-target="#copyModal"><i class="fa fa-copy"></i><span class="d-sm-none d-inline ml-5">Copy</span></button>
+                                    <button class=" btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-alt"></i><span class="d-sm-none d-inline ml-5">Delete</span></button>
+                                </div>
+                                </div>
+
+                                <div class="" data-target="slide-content">
+                                    <div class="card-body">
+                                      <form class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Name</label>
+                                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name" required>
+                                          <div class="invalid-feedback">
+                                            You must enter email before submitting.
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                          <div class="invalid-feedback">
+                                            You must enter email before submitting.
+                                          </div>
+                                        </div>
+                                        <button class="btn btn-primary" type="submit" data-target="slide-up">Submit form</button>
+                                      </form>
+                                    </div>
+                                  </div>
+                                
+                             </div>
+                            <!---item--2-->
+
+
+                            <div class="create__rqst">
+                                <!--create request-->
+                          <div class="request__slide">
+                            <div class="slide__content mt-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="pannel-fields">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="reference-id"  placeholder="Request Title*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control select2" style="width: 100%;">
+                                            <option selected="selected">Regular Request</option>
+                                            <option >Every 4 days</option>
+                                            <option >Every 7 days</option>
+                                            <option>Never</option>
+                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="editor" contenteditable="false">
+
+                                            <section id="toolbar">
+                                      
+                                              <div id="bold" class="icon fas fa-bold"></div>
+                                              <div id="italic" class="icon fas fa-italic"></div>
+                                              <div id="underline" class="icon fas fa-underline"></div>
+                                              <div id="strikeThrough" class="icon fas fa-strikethrough"></div>
+                                              <div id="createLink" class="icon fas fa-link"></div>
+                                              <div id="insertUnorderedList" class="icon fas fa-list-ul"></div>
+                                              <div id="insertOrderedList" class="icon fas fa-list-ol"></div>
+                                              <div id="justifyLeft" class="icon fas fa-align-left"></div>
+                                              <div id="justifyRight" class="icon fas fa-align-right"></div>
+                                              <div id="justifyCenter" class="icon fas fa-align-center"></div>
+                                              <div id="justifyFull" class="icon fas fa-align-justify"></div>
+                                      
+                                            </section>
+                                      
+                                            <section id="page" contenteditable="true">
+                                      
+                                              <p id="page-content" placeholder="Request description"></p>
+                                      
+                                            </section>
+                                      
+                                          </div>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <!--begin::Form-->
+                                    <form class="form" action="#" method="post">
+                                        <!--begin::Input group-->
+                                        <div class="fv-row">
+                                            <!--begin::Dropzone-->
+                                            <div class="dropzone" id="kt_dropzonejs_example_1">
+                                                <!--begin::Message-->
+                                                <div class="dz-message needsclick">
+                                                    <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
+
+                                                    <!--begin::Info-->
+                                                    <div class="ms-4">
+                                                        <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
+                                                    
+                                                    </div>
+                                                    <!--end::Info-->
+                                                </div>
+                                            </div>
+                                            <!--end::Dropzone-->
+                                        </div>
+                                        <!--end::Input group-->
+                                    </form>
+                                    </div>
+                                  </div>
+                                  
+                             
+                            </div>
+                          </div>
+                          <!--create request end-->
+                            </div>
+
+                          </div>
+                          <div class="col-sm-12 accordion-wrap ">
+                            <div class="buttons-sec ml-4">
+                                <button class="btn btn-primary mr-2" type="submit" >Create Request</button>
+                                <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#modalRequestTemplates">Load templates</button>
+                            </div>
+                           
+                         </div>
+                         
+                      </div>
+                        
+                    
+                </div>
+                    
+                
+                   
+                  </div><!-- /.card body -->
+                 
+                </div><!-- /.card -->
+             
+            </div><!-- /.card -->
+   
+    
+    <!--second card END -->
+    <!---modal copy poup start-->
+    <div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Copy Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label>Choose a name for the request copy.</label>
+              <div class="form-group">
+                <input type="text" class="form-control" id="reference-id" value="Driver's License - copy" placeholder="Drivers request">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Copy Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal copy poup end-->
+    <!---modal delete poup start-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Remove Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to remove this request from the invite? This action can't be undone.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal copy poup end-->
+
+    <!--large modal-->
+    <div class="modal fade" id="modalRequestTemplates">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><b>Load Templates</b></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+           <div class="p-4 pb-0">
+            <strong>Select the templates/requests you want to add to your invite from the list below</strong>
+           </div>
+            <!-- /.content-header -->
+        
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                  <div class="">
+                    <div class="card-header">
+                        
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form action="#">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control form-control-md" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-md btn-default">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                           
+                            
+                        </div>
+                      </div>
+        
+                        <!-- Demo header-->
+        <div class="py-4 header">
+            <div class="container py-2">
+               
+                <div class="row">
+                    <div class="col-md-3 nav-pills-wrap">
+                        <!-- Tabs nav -->
+                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link mb-2 p-2  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                <i class="fa fa-user-circle-o mr-2"></i>
+                                <span class="font-weight-bold  text-uppercase"><i class="fas fa-user mr-3"></i>Mine</span></a>
+        
+                            <a class="nav-link mb-2 p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                <i class="fa fa-calendar-minus-o mr-2"></i>
+                                <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Shared</span></a>
+        
+                            <a class="nav-link mb-2 p-2 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                <span class="font-weight-bold  text-uppercase"><i class="fas fa-user-friends mr-3"></i>Fileinvite</span></a>
+        
+                            </div>
+                    </div>
+        
+        
+                    <div class="col-md-6 tab-content__wrapper">
+                        <!-- Tabs content -->
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade  rounded  show active p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                               <div class="template__wrapper">
+                                    <div class="template__desc">
+                                        <i class="fas fa-align-left"></i>
+                                        <strong>Sample - Identification Documents</strong><br/>
+                                        <small>2023-05-23</small>
+                                    </div>
+                                    <div class="template__actions">
+                                        <div class="project-actions text-center">
+                                          <a class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus"></i> add
+                                        </a>
+                                        </div>
+                                    </div>
+                               </div>
+        
+                                     <div class="template__wrapper">
+                                        <div class="template__desc">
+                                            <i class="fas fa-align-left"></i>
+                                            <strong>Sample - Identification Documents</strong><br/>
+                                            <small>2023-05-23</small>
+                                        </div>
+                                        <div class="template__actions">
+                                            <div class="project-actions text-center">
+                                              <a class="btn btn-primary btn-sm">
+                                                <i class="fas fa-plus"></i> add
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                           <div class="template__wrapper">
+                              <div class="template__desc">
+                                  <i class="fas fa-align-left"></i>
+                                  <strong>Sample - Identification Documents</strong><br/>
+                                  <small>2023-05-23</small>
+                              </div>
+                              <div class="template__actions">
+                                  <div class="project-actions text-center">
+                                    <a class="btn btn-primary btn-sm">
+                                      <i class="fas fa-plus"></i> add
+                                  </a>
+                                  </div>
+                              </div>
+                          </div>
+        
+                       <div class="template__wrapper">
+                                <div class="template__desc">
+                                    <i class="fas fa-align-left"></i>
+                                    <strong>Sample - Identification Documents</strong><br/>
+                                    <small>2023-05-23</small>
+                                </div>
+                                <div class="template__actions">
+                                    <div class="project-actions text-center">
+                                      <a class="btn btn-primary btn-sm">
+                                        <i class="fas fa-plus"></i> add
+                                    </a>
+                                    </div>
+                                </div>
+                         </div>
+                            </div>
+                            
+                            <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="template__wrapper">
+                                    <div class="template__desc">
+                                        <i class="fas fa-align-left"></i>
+                                        <strong>Sample - Identification Documents</strong><br/>
+                                        <small>2023-05-23</small>
+                                    </div>
+                                    <div class="template__actions">
+                                        <div class="project-actions text-center">
+                                          <a class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus"></i> add
+                                        </a>
+                                        </div>
+                                    </div>
+                           </div>  
+                            </div>
+                            
+                            <div class="tab-pane fade  rounded bg-white p-2" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class="template__wrapper">
+                                    <div class="template__desc">
+                                        <i class="fas fa-align-left"></i>
+                                        <strong>Sample - Identification Documents</strong><br/>
+                                        <small>2023-05-23</small>
+                                    </div>
+                                    <div class="template__actions">
+                                        <div class="project-actions text-center">
+                                            <a class="btn btn-primary btn-sm">
+                                                <i class="fas fa-plus"></i> add
+                                            </a>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 nav-pills-wrap">
+                  <!-- Tabs nav -->
+                  <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <h4>Selected Templates</h4>
+  
+                      </div>
+              </div>
+            </div>
+        </div>
+        
+               
+                  </div>
+
+                    
+                    
+                </div><!-- /.container-fluid -->
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-warning">Merge with <b>Invites</b></button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+       <!--large modal end-->
+            
+        </div><!-- /.container-fluid -->
+        
+      </section>
+    <!-- /.content -->
+  </div>
+
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer d-flex justify-content-center gap-3">
+    <b class="mr-2"><a href="https://www.fileinvite.com/terms">Terms</a></b> <span>|</span>
+    <b class="ml-2"><a href="https://www.fileinvite.com/terms">Privacy</a></b>
+   
+    <div class="float-right  d-sm-inline-block ml-2">
+     © 2014 - 2023  
+        FileInvite
+        . All Rights Reserved
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" ></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<script src="plugins/dropzone/min/dropzone.min.js"></script>
+<script src="dist/js/script.js"></script>
+<script src="dist/js/adminlte.js"></script>
+<script>
+    $(function () {
+      $('.select2').select2()
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+    })
+    $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+var acc = document.getElementsByClassName("accordion-wrap");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+const slideUpBtn = document.querySelector('[data-target="slide-up"]');
+const slideDownBtn = document.querySelector('[data-target="slide-down"]');
+const slideContent = document.querySelector('[data-target="slide-content"]');
+slideDownBtn.addEventListener("click", slideDown);
+slideUpBtn.addEventListener("click", slideUp);
+
+function slideDown(e) {
+  e.preventDefault();
+  slideContent.classList.add("slide-down");
+  slideContent.classList.remove("slide-up");
+}
+
+function slideUp(e) {
+  e.preventDefault();
+  slideContent.classList.add("slide-up");
+  slideContent.classList.remove("slide-down");
+}
+
+var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
+    url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
+    paramName: "file", // The name that will be used to transfer the file
+    maxFiles: 10,
+    maxFilesize: 10, // MB
+    addRemoveLinks: true,
+    accept: function(file, done) {
+        if (file.name == "wow.jpg") {
+            done("Naha, you don't.");
+        } else {
+            done();
+        }
+    }
+});
+$(document).ready(function(){
+  $('.acc-head').click(function(){
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('active');
+  })
+})
+  </script>
+
+</body>
+</html>
