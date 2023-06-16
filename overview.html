@@ -476,34 +476,32 @@
                 </div>
 
                 <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
-                    
+                
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-md-5">
                                 <h4 class="mb-4">JOHN DOE <span class="badge btn-info">Returned</span></h4>
                             </div>
                             <div class="col-md-7">
-                           
                                 <div class="return__wraps">
-                                <a href="#" class="btn btn-default">Print notes</a>
-                                <a href="#" class="btn btn-info">Download</a>
-                                <a href="#" class="btn btn-warning">Edit Requests</a>
-                                <div class="dropdown">
+                                    <a href="#" class="btn btn-default">Print notes</a>
+                                    <a href="#" class="btn btn-info"  data-toggle="modal" data-target="#DownloadtModal">Download</a>
+                                    <a href="#" class="btn btn-warning">Edit Requests</a>
+                                  <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Collate Files
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                      <button class="dropdown-item" type="button">Quick</button>
-                                      <button class="dropdown-item" type="button">Advanced</button>
-                                      <button class="dropdown-item" type="button">Collate Files</button>
+                                      <button class="dropdown-item" type="button"  data-toggle="modal" data-target="#CollateModal">Quick</button>
+                                      <button class="dropdown-item" type="button" data-toggle="modal" data-target="#CollateAdvancedModal" >Advanced</button>
+                                      <button class="dropdown-item" type="button" data-toggle="modal" data-target="#CollateSelectedModal">Collate Files</button>
                                     </div>
                                   </div>
                                 </div>
-                                
                             </div>
                         </div>
-                    </div>
-                     <div class="accordion-wrapper">
+                  
+                     <!-- <div class="accordion-wrapper">
                         <div class="acc-head  p-3 rounded-0 bg-pale-returned">
                             <div class="acc-head-wrap">
                               <strong><i class="fas fa-chevron-circle-down mr-2"></i>Utility Bill</strong>
@@ -558,7 +556,7 @@
                                      <div class="col-sm-7">
                                          <b>  Attached Files:</b>
                                          <small>No files are attached</small>
-                                        
+                                        </div>
                                      </div>
                                  </div>
                              </div>
@@ -607,7 +605,8 @@
                                      <div class="col-sm-7">
                                          <b>  Attached Files:</b>
                                          <small>No files are attached</small>
-                                        
+                                        </div>
+                                        </div>
                                      </div>
                                  </div>
                              </div>
@@ -657,6 +656,8 @@
                                          <small>No files are attached</small>
                                         
                                      </div>
+                                     </div>
+                                     </div>
                                  </div>
                              </div>
                         </div>
@@ -688,7 +689,6 @@
                                         <div class="mt-3">
                                             <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
                                         </div>
-
                                     </div>
                                 </div>
                               </div>
@@ -704,43 +704,55 @@
                                      <div class="col-sm-7">
                                          <b>  Attached Files:</b>
                                          <small>No files are attached</small>
-                                        
                                      </div>
-                                 </div>
-                             </div>
+                                   </div>
+                               </div>
+                            </div>
+                            </div
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="accordion-wrapper">
-                        <div class="acc-head  p-3 rounded-0">
+                        <div class="acc-head  p-3 rounded-0 bg-pale-returned">
                             <div class="acc-head-wrap">
-                              <strong><i class="fas fa-chevron-circle-down mr-2"></i>Engagement of Services</strong>
+                              <strong><i class="fas fa-chevron-circle-down mr-2"></i>Driving licence</strong>
                             </div>
                             <div class="acc-head-wrap">
-                                <span class="badge btn-danger ml-4">Rejected</span>
+                                <span class="badge btn-info ml-4">Returned</span>
                             </div>
                           
                         </div>
-                        <div class="acc-body rounded-0">
+                         <div class="acc-body rounded-0">
                             <div class="acc-body_main d-flex space between">
                                <div class="col-sm-12">
+                                <dic class="icons__map-wrap">
+                                    <div class="icons__map">
+                                        <a href="#" data-toggle="tooltip" title="No notes have been submitted"><i class="far fa-sticky-note mr-2" aria-hidden="true"></i>0</a>
+                                        <a href="#" data-toggle="tooltip" title="one files uploaded"><i class="far fa-file ml-2" aria-hidden="true"></i>1</a>
+                                        
+                                    </div>
+                                    <div class="icons__map">
+                                        <a href="#" data-toggle="tooltip" title="No notes have been submitted"><i class="fas fa-file-contract  ml-2" aria-hidden="true"></i>0</a>
+                                        <a href="#" data-toggle="tooltip" title="Reject returned information"><i class="fa fa-thumbs-up  ml-2" aria-hidden="true"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Approve returned information"><i class="fa fa-thumbs-down  ml-2" aria-hidden="true"></i></a>
+                                        
+                                    </div>
+                                    </dic>
                                    <div class="row">
-                                    <h4 >Returned <b>Information</b></h4>   
-                                    <div class="col-sm-4 mt-3">
-                                      
+                                       <h4 >Returned <b>Information</b></h4>   
+                                        <div class="col-sm-4 mt-3">
                                        <p>Typed Response:</p>
                                        <span>No typed response was returned</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <b>  Received Files:</b>
-                                        <small>key-brainstorming-img.pdf</small>
-                                        <div class="mt-3">
-                                            <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                       </div>
+                                        <div class="col-sm-7">
+                                            <b>  Received Files:</b>
+                                            <small>key-brainstorming-img.pdf</small>
+                                            <div class="mt-3">
+                                                <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
-                              </div>
                             </div>
                             <div class="acc-body_main d-flex space between mt-4">
                                 <div class="col-sm-12">
@@ -753,13 +765,206 @@
                                      <div class="col-sm-7">
                                          <b>  Attached Files:</b>
                                          <small>No files are attached</small>
-                                        
                                      </div>
-                                 </div>
-                             </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
 
+                        <div class="accordion-wrapper">
+                            <div class="acc-head  p-3 rounded-0">
+                                <div class="acc-head-wrap">
+                                  <strong><i class="fas fa-chevron-circle-down mr-2"></i> Utility Bill</strong>
+                                </div>
+                                <div class="acc-head-wrap">
+                                    <span class="badge btn-info ml-4">Returned</span>
+                                </div>
+                              
+                            </div>
+                             <div class="acc-body rounded-0">
+                                <div class="acc-body_main d-flex space between">
+                                   <div class="col-sm-12">
+                                       <div class="row">
+                                           <h4 >Returned <b>Information</b></h4>   
+                                            <div class="col-sm-4 mt-3">
+                                           <p>Typed Response:</p>
+                                           <span>No typed response was returned</span>
+                                           </div>
+                                            <div class="col-sm-7">
+                                                <b>  Received Files:</b>
+                                                <small>key-brainstorming-img.pdf</small>
+                                                <div class="mt-3">
+                                                    <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc-body_main d-flex space between mt-4">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                         <h4 >Request  <b>Details</b></h4>   
+                                         <div class="col-sm-4 mt-3">
+                                            <p>Description:</p>
+                                            <span>Please upload a copy of your current driver's licence</span>
+                                         </div>
+                                         <div class="col-sm-7">
+                                             <b>  Attached Files:</b>
+                                             <small>No files are attached</small>
+                                         </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!---3-->
+                            <div class="accordion-wrapper">
+                                <div class="acc-head  p-3 rounded-0 bg-pale-rejected">
+                                    <div class="acc-head-wrap">
+                                      <strong><i class="fas fa-chevron-circle-down mr-2"></i>Secondary ID</strong>
+                                    </div>
+                                    <div class="acc-head-wrap">
+                                        <span class="badge btn-danger ml-4">Rejected</span>
+                                    </div>
+                                  
+                                </div>
+                                 <div class="acc-body rounded-0">
+                                    <div class="acc-body_main d-flex space between">
+                                       <div class="col-sm-12">
+                                           <div class="row">
+                                               <h4 >Returned <b>Information</b></h4>   
+                                                <div class="col-sm-4 mt-3">
+                                               <p>Typed Response:</p>
+                                               <span>No typed response was returned</span>
+                                               </div>
+                                                <div class="col-sm-7">
+                                                    <b>  Received Files:</b>
+                                                    <small>key-brainstorming-img.pdf</small>
+                                                    <div class="mt-3">
+                                                        <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="acc-body_main d-flex space between mt-4">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                             <h4 >Request  <b>Details</b></h4>   
+                                             <div class="col-sm-4 mt-3">
+                                                <p>Description:</p>
+                                                <span>Please upload a copy of your current driver's licence</span>
+                                             </div>
+                                             <div class="col-sm-7">
+                                                 <b>  Attached Files:</b>
+                                                 <small>No files are attached</small>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            <!---3 end-->
+
+                            <!--4-->
+                            <div class="accordion-wrapper">
+                                <div class="acc-head  p-3 rounded-0">
+                                    <div class="acc-head-wrap">
+                                      <strong><i class="fas fa-chevron-circle-down mr-2"></i>Disclosure Statement</strong>
+                                    </div>
+                                    <div class="acc-head-wrap">
+                                        <span class="badge btn-secondary ml-4">Readonly</span>
+                                    </div>
+                                  
+                                </div>
+                                 <div class="acc-body rounded-0">
+                                    <div class="acc-body_main d-flex space between">
+                                       <div class="col-sm-12">
+                                           <div class="row">
+                                               <h4 >Returned <b>Information</b></h4>   
+                                                <div class="col-sm-4 mt-3">
+                                               <p>Typed Response:</p>
+                                               <span>No typed response was returned</span>
+                                               </div>
+                                                <div class="col-sm-7">
+                                                    <b>  Received Files:</b>
+                                                    <small>key-brainstorming-img.pdf</small>
+                                                    <div class="mt-3">
+                                                        <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="acc-body_main d-flex space between mt-4">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                             <h4 >Request  <b>Details</b></h4>   
+                                             <div class="col-sm-4 mt-3">
+                                                <p>Description:</p>
+                                                <span>Please upload a copy of your current driver's licence</span>
+                                             </div>
+                                             <div class="col-sm-7">
+                                                 <b>  Attached Files:</b>
+                                                 <small>No files are attached</small>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            <!--4 end-->
+                            <!--5-->
+                            <div class="accordion-wrapper">
+                                <div class="acc-head  p-3 rounded-0 bg-pale-readonly">
+                                    <div class="acc-head-wrap">
+                                      <strong><i class="fas fa-chevron-circle-down mr-2"></i>Engagement of Services</strong>
+                                    </div>
+                                    <div class="acc-head-wrap">
+                                        <span class="badge btn-info ml-4">Returned</span>
+                                    </div>
+                                  
+                                </div>
+                                 <div class="acc-body rounded-0">
+                                    <div class="acc-body_main d-flex space between">
+                                       <div class="col-sm-12">
+                                           <div class="row">
+                                               <h4 >Returned <b>Information</b></h4>   
+                                                <div class="col-sm-4 mt-3">
+                                               <p>Typed Response:</p>
+                                               <span>No typed response was returned</span>
+                                               </div>
+                                                <div class="col-sm-7">
+                                                    <b>  Received Files:</b>
+                                                    <small>key-brainstorming-img.pdf</small>
+                                                    <div class="mt-3">
+                                                        <input class="form-control form-control-sm col-md-6" id="formFileSm" type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="acc-body_main d-flex space between mt-4">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                             <h4 >Request  <b>Details</b></h4>   
+                                             <div class="col-sm-4 mt-3">
+                                                <p>Description:</p>
+                                                <span>Please upload a copy of your current driver's licence</span>
+                                             </div>
+                                             <div class="col-sm-7">
+                                                 <b>  Attached Files:</b>
+                                                 <small>No files are attached</small>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            <!--5 end-->
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                   third
@@ -778,6 +983,141 @@
        </div>
     </div>
          
+
+      <!---modal download john doe files  poup start-->
+      <div class="modal fade" id="DownloadtModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header btn-secondary">
+              <h5 class="modal-title" id="CopyModalLabel">Downlaod Files</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The zip file couldn't be created. This could be because there are no files to zip or there was an error in the process. If the issue persists, please contact us.</p>
+              <div class="form-group">
+                <input type="text" class="form-control" id="reference-id" value="Driver's License - copy" placeholder="Drivers request">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Copy Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal  download john doe files  poup  poup end-->
+
+    
+      <!---modal collateup start-->
+      <div class="modal fade" id="CollateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header btn-secondary">
+              <h5 class="modal-title" id="CopyModalLabel">Error Collating Documents</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5>Unfortunately, something has gone wrong</h5>
+
+                <div class="m-4 text-center">
+                    <img src="dist/img/cross.png" />
+                </div>
+              <p>Please click Try Again button to resubmit.
+                If the error persists, please contact us.</p>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-warning">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal  collate-->
+
+    <!---modal collateup selected-->
+    <div class="modal fade" id="CollateSelectedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Collate Selected Documents</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+
+               
+              <p>You have not selected any files to collate. The files must be converted to PDF before being able to select them.</p>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"> Cancel</button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal  collate-->
+
+     <!---modal collateup advanced-->
+     <div class="modal fade" id="CollateSelectedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Collate Selected Documents</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+
+               
+              <p>You have not selected any files to collate. The files must be converted to PDF before being able to select them.</p>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"> Cancel</button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    <!---modal  collate advanced end-->
+
+
+    
+     <!---modal collateup advanced-->
+     <div class="modal fade" id="CollateAdvancedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CopyModalLabel">Collate Documents</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+              <p>Please click the download button to collate the files into a single document. Instead of waiting, the file can be emailed to you as soon as it is finished.</p>
+             
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-warning">Email me the file</button>
+                <button type="button" class="btn btn-warning">Download</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    <!---modal  collate advanced end-->
+        
         
       </div><!-- /.container-fluid -->
     </section>
