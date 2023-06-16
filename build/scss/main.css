@@ -779,11 +779,22 @@ table p {
   position: relative;
   margin-bottom: 0.5rem;
 }
+.accordion-wrapper .request-attachments-box {
+  margin-left: 40px;
+}
+.accordion-wrapper .request-attachments-box i {
+  margin-left: 20px;
+}
+.accordion-wrapper .request-attachments-count {
+  color: #fff;
+}
 
 .acc-head {
   position: relative;
   background: #dadee2;
   border-bottom: 1px solid #eee;
+  display: flex;
+  margin-bottom: 5px;
 }
 
 .acc-head::after {
@@ -808,6 +819,21 @@ table p {
   padding: 1rem;
   display: none;
   background: #dadee2;
+}
+.acc-body .acc-body_main {
+  background: #fff;
+  padding: 10px 10px;
+}
+.acc-body .acc-body_main .icons__map-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: antiquewhite;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.acc-body .acc-body_main .icons__map-wrap a {
+  color: #293038;
 }
 
 #copyModal .modal-header, #deleteModal .modal-header {
@@ -1016,4 +1042,37 @@ table p {
     max-width: 800px;
     margin: 0 auto;
   }
+}
+.invite__progress__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  padding: 20px 11px;
+}
+
+.invite__options {
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 20px;
+}
+
+.return__wraps {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.bg-pale-returned {
+  background-color: #f9e2d3 !important;
+}
+
+.bg-pale-rejected {
+  background-color: #fef1f1 !important;
+}
+
+.bg-pale-readonly {
+  background-color: #f1f1f1 !important;
 }/*# sourceMappingURL=main.css.map */

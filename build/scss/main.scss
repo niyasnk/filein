@@ -745,11 +745,21 @@ $slide-content-height: 250px;
 .accordion-wrapper {
   position: relative;
   margin-bottom: .5rem;
+  .request-attachments-box{
+    margin-left: 40px;
+    i{
+      margin-left: 20px;
+    }
+  }
+  .request-attachments-count{
+  color: #fff;
+  }
 }
 .acc-head{
   position: relative;
   background: #dadee2;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eee;display: flex;
+  margin-bottom: 5px;
 }
 .acc-head::after{
   content: '\276F';
@@ -771,6 +781,21 @@ $slide-content-height: 250px;
   padding: 1rem;
   display: none;
   background: #dadee2;
+  .acc-body_main{
+    background: #fff;
+    padding: 10px 10px;
+    .icons__map-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: antiquewhite;
+    padding: 10px;
+    margin-bottom: 20px;
+    a{
+      color: #293038;
+    }
+    }
+  }
 }
 #copyModal,#deleteModal{
   .modal-header{
@@ -796,18 +821,18 @@ $slide-content-height: 250px;
     }
   }
   .clouds_title{
-  a{
-    color: #2E3192;
-    strong{
-      font-size: 17px;
+    a{
       color: #2E3192;
+        strong{
+          font-size: 17px;
+          color: #2E3192;
+        }
     }
-  }
-  p{
-    margin: 1.3rem;
-    color: #918080;
-    font-size: 18px;
-  }
+    p{
+      margin: 1.3rem;
+      color: #918080;
+      font-size: 18px;
+    }
   }
 }
 
@@ -910,10 +935,7 @@ $slide-content-height: 250px;
 .invite__forms{
   margin-top: 30px;
 }
-.invite_collapse{
- 
-  
-}
+
 .invite-contact__wrap{
   border: 1px solid #ddd;
   min-height: 120px;
@@ -999,4 +1021,32 @@ $slide-content-height: 250px;
     max-width: 800px;
     margin: 0 auto;
   }
+}
+.invite__progress__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  padding: 20px 11px;
+}
+.invite__options{
+  border: 1px solid #ddd;
+    border-top: 0;
+    padding: 20px;
+}
+.return__wraps{
+  display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.bg-pale-returned {
+  background-color: #f9e2d3!important;
+}
+.bg-pale-rejected {
+  background-color: #fef1f1!important;
+}
+.bg-pale-readonly {
+  background-color: #f1f1f1!important;
 }
