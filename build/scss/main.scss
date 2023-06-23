@@ -1083,3 +1083,20 @@ $slide-content-height: 250px;
     }
   }
 }
+.assignee_lists{
+  padding: 12px 12px;
+  border-bottom: 1px solid #ddd;
+  background: #eeeded;
+  margin-bottom: 5px;
+  .assigneed__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.send__vertical-tab{
+  textarea{
+    resize: none;
+  }
+}
