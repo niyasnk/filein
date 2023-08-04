@@ -933,7 +933,7 @@ $slide-content-height: 250px;
   }
 }
 .invite__forms{
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .invite-contact__wrap{
@@ -965,6 +965,10 @@ $slide-content-height: 250px;
   }
 
 //getting started
+#gmodal.modal.show .modal-dialog{
+  overflow: auto;
+    height: 80vh;
+}
 .modal{
   .g_wrapper{
     .g_flex{

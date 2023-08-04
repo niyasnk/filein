@@ -957,7 +957,7 @@ table p {
 }
 
 .invite__forms {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .invite-contact__wrap {
@@ -990,24 +990,16 @@ table p {
 .invite__wrapper .invite__item img {
   margin-bottom: 15px;
 }
-.g_wrapper  {
-  box-sizing: border-box;
-  padding: 20px 10px;
-  font-size: 13px;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
+
+#gmodal.modal.show .modal-dialog {
   overflow: auto;
+  height: 80vh;
 }
-#gmodal.modal.show .modal-dialog{
-  overflow: auto;
-    height: 80vh;
-}
+
 .modal .g_wrapper .g_flex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  
 }
 .modal .g_wrapper .g_flex .g_content {
   margin-left: 15px;

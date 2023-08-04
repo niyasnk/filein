@@ -5,31 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>fileinvite | Dashboard</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.min.css">
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="build/scss/main.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+ 
   <!-- Daterange picker -->
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="build/scss/main.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -147,11 +148,6 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-
-
-      <!-- SidebarSearch Form -->
-      
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -187,7 +183,7 @@
               <li class="nav-item">
                 <a href="invites.html" class="nav-link">
                   <i class="far fa-envelope nav-icon"></i>
-                  <p>Invites</p>
+                  <p>All Invites</p>
                 </a>
               </li>
             </ul>
@@ -202,7 +198,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="Templates.html" class="nav-link">
                   <i class="fas fa-align-right nav-icon"></i>
                   <p>Templates</p>
                 </a>
@@ -221,7 +217,7 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-book nav-icon"></i>
-                  <p> Contacts</p>
+                  <p> Personal  Contacts</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -440,18 +436,18 @@
                                      </div>
               
                                  <div class="template__wrapper">
-                                              <div class="template__desc">
-                                                  <i class="fas fa-align-left"></i>
-                                                  <strong>Sample - Identification Documents</strong><br/>
-                                                  <small>2023-05-23</small>
-                                              </div>
-                                              <div class="template__actions">
-                                                  <div class="project-actions text-center">
-                                                    <a class="btn btn-primary btn-sm">
-                                                      <i class="fas fa-plus"></i> add
-                                                  </a>
-                                                  </div>
-                                              </div>
+                                      <div class="template__desc">
+                                        <i class="fas fa-align-left"></i>
+                                        <strong>Sample - Identification Documents</strong><br/>
+                                        <small>2023-05-23</small>
+                                        </div>
+                                        <div class="template__actions">
+                                          <div class="project-actions text-center">
+                                           <a class="btn btn-primary btn-sm">
+                                             <i class="fas fa-plus"></i> add
+                                            </a>
+                                        </div>
+                                      </div>
                                   </div>
               
                                   <div class="template__wrapper">
@@ -1559,7 +1555,89 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="invite__title mt-4" style="color:grey;"><h4>Additional Settings</h4></div>
                     <div class="addional_icons">
-                      <a href="#"><i class="fa fa-pencil-alt mr-2"></i></a>
+                      <a href="#"  data-toggle="modal" data-target="#additionalModal"><i class="fa fa-pencil-alt mr-2"></i></a>
+              
+                    </div>
+                    
+                    <div class="modal fade " id="additionalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Additional settings</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="col-md-7">
+                                <div class="pannel-fields">
+                                  <label>Almost Due Reminder</label>
+                                  <div class="form-group">
+                                      <select class="form-control select2" style="width: 100%;">
+                                      <option selected="selected">One day Before due</option>
+                                      <option>3 days  Before due</option>
+                                      <option>One week  Before due</option>
+                                      <option>Never</option>
+                                      
+                                      </select>
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="col-md-5">
+                               <div class="d-flex" style="margin-top: 40px;">
+                                <div class="mr-2"><a href="#"><img src="dist/img/whatsapp-svgrepo-com.svg" width="20" /></a></div>
+                                <div class="mr-2"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                <div><a href="#">Edit</a></div>
+                               </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-7">
+                                <div class="pannel-fields">
+                                  <label>Overdue Reminder</label>
+                                  <div class="pannel-fields">
+                                    <div class="form-group">
+                                        <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">Every 2 days</option>
+                                        <option selected="selected">Every 4 days</option>
+                                        <option selected="selected">Every 7 days</option>
+                                        <option>Never</option>
+                                        
+                                        </select>
+                                    </div>
+                                </div>
+                              </div>
+                              </div>
+                              <div class="col-md-5">
+                               <div class="d-flex" style="margin-top: 40px;">
+                                <div class="mr-2"><a href="#"><img src="dist/img/whatsapp-svgrepo-com.svg" width="20" /></a></div>
+                                <div class="mr-2"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></div>
+                                <div><a href="#">Edit</a></div>
+                               </div>
+                              </div>
+                            </div>
+
+                  
+                              <div class="pannel-fields">
+                                <label>Password Protected</label>
+                                <div class="form-group">
+                                    <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Yes</option>
+                                    <option selected="selected">No</option>
+              
+                                    </select>
+                                </div>
+                            
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="invite__forms">
@@ -1618,6 +1696,7 @@
 <script src="dist/js/adminlte.js"></script>
 <script src="plugins/select2/js/select2.full.min.js"></script>
 <script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 <script src="plugins/dropzone/min/dropzone.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
 <script>
@@ -1676,7 +1755,6 @@ $(document).ready(function(){
 })
 $(window).on('load',function(){
     var delayMs = 1500; // delay in milliseconds
-    
     setTimeout(function(){
         $('#myModal').modal('show');
     }, delayMs);
