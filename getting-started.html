@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="build/dist/css/main.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -418,6 +419,90 @@
       </div>
     <!--- container table end-->
 
+
+
+<div class="modal fade show" id="gmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" aria-modal="true" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><b>Getting Started</b></h4>
+        <a  href="index.html" class="close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+          
+        </div>
+        <div class="mt-2">100% Complete</div>
+        <div class="g_wrapper mt-4">
+          <div class="g_flex d-flex">
+            <div class="g_flex_wrap">
+              <img src="dist/img/tick.svg" width="32" />
+            </div>
+            <div class="g_content ml-2">
+              <h5>Send your first invite </h5>
+              <p>Use a template to <a href="create_invite.html">send  your first request</a> for information, create contacts and a unique client portal link in seconds.</p>
+            </div>
+          </div>
+
+          <div class="g_flex d-flex">
+            <div class="g_flex_wrap">
+              <img src="dist/img/tick.svg" width="32" />
+            </div>
+            <div class="g_content ml-2">
+              <h5>Preview your client portal</h5>
+              <p>Visit the client portal you created,<a href="invites.html"> see what your client sees</a> and how they will send requested information back to you.</p>
+            </div>
+          </div>
+           <h6 class="p-2"><b>Now try some more advanced features</b></h6>
+          <div class="g_flex d-flex">
+            <div class="g_flex_wrap">
+              <img src="dist/img/tick.svg" width="32" />
+            </div>
+            <div class="g_content ml-2">
+              <h5>Explore your customer dashboard</h5>
+              <p><a href="invites.html">Visit your dashboard </a> 
+                to see completed invites, manage client messages, approve returned documents and more.</p>
+            </div>
+          </div>
+
+          <div class="g_flex d-flex">
+            <div class="g_flex_wrap">
+              <img src="dist/img/tick.svg" width="32" />
+            </div>
+            <div class="g_content ml-2">
+              <h5>Add your branding</h5>
+              <p><a href="branding.html">Customize any client portals</a> 
+                you create with your company logo and colors for instant client recognition</p>
+            </div>
+          </div>
+
+          <div class="g_flex d-flex">
+            <div class="g_flex_wrap">
+              <img src="dist/img/tick.svg" width="32" />
+            </div>
+            <div class="g_content ml-2">
+              <h5>Create your own invite</h5>
+              <p><a href="create_invite.html">Create a  new invite</a> from scratch, add information requests and save it as a template to use again and again./p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+           Don't show this again
+          </label>
+        </div>
+        <a  class="btn btn-primary"  href="index.html">Skip</a>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -476,5 +561,14 @@
 <!-- <script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script>
+  $(window).on('load',function(){
+    var delayMs = 1500; // delay in milliseconds
+    
+    setTimeout(function(){
+        $('#gmodal').modal('show');
+    }, delayMs);
+});
+</script>
 </body>
 </html>

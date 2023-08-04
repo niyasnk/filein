@@ -963,6 +963,23 @@ $slide-content-height: 250px;
       }
     }
   }
+
+//getting started
+.modal{
+  .g_wrapper{
+    .g_flex{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      .g_content{
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+
+
 @media (max-width: $breakpoint-mobile) {
   .preview_icons{
     width: 100%;
@@ -1100,3 +1117,5 @@ $slide-content-height: 250px;
     resize: none;
   }
 }
+
+
