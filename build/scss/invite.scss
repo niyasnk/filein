@@ -552,3 +552,54 @@ p {
   }
 }
 
+
+.trms-logo{
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+      .logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+    }
+    .header-right {
+      float: right;
+    }
+  }
+  
+}
+
+.terms_desc{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.terms_wrap{
+  h1{
+    font-size: 45px;
+  }
+  h2{
+    font-size: 35px;
+  }
+}
+
+.terms-footer{
+  margin-bottom: 30px;
+}
