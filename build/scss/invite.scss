@@ -62,14 +62,11 @@ body{
   left: 0;
   min-height: 100vh;
   width: 120px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   padding: 10px 0;
-  background-color: #2d3037;
-
+  background-color: #1a3d60;
   transition: transform 0.2s linear;
 }
 
@@ -120,7 +117,8 @@ body{
 }
 
 .main .navigation .link:hover,
-.main .navigation .link.active {
+.main .navigation .link.active,
+.main.navigation i.active {
   color: #fff;
 }
 
@@ -160,6 +158,20 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: #d0dfcc;
+}
+.content {
+  .head{
+    .request-bg{
+      background: #1a3d60;
+    padding: 10px;
+    border-radius: 5px;
+    
+      p{
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .content .head form {

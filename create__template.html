@@ -522,24 +522,11 @@
                                             <!--begin::Form-->
                                         <form class="form" action="#" method="post">
                                             <!--begin::Input group-->
-                                            <div class="fv-row">
-                                                <!--begin::Dropzone-->
-                                                <div class="dropzone" id="kt_dropzonejs_example_1">
-                                                    <!--begin::Message-->
-                                                    <div class="dz-message needsclick">
-                                                        <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
-
-                                                        <!--begin::Info-->
-                                                        <div class="ms-4">
-                                                            <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                        
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                </div>
-                                                <!--end::Dropzone-->
+                                            <div class="mb-3">
+                                              <label for="formFile" class="form-label">Default file input example</label>
+                                              <input class="form-control" type="file" id="formFile">
                                             </div>
-                                            <!--end::Input group-->
+                                            <button type="button" class="btn btn-secondary">Upload</button>
                                         </form>
                                         </div>
                                       </div>
@@ -617,24 +604,12 @@
                                         <!--begin::Form-->
                                     <form class="form" action="#" method="post">
                                         <!--begin::Input group-->
-                                        <div class="fv-row">
-                                            <!--begin::Dropzone-->
-                                            <div class="dropzone" id="kt_dropzonejs_example_1">
-                                                <!--begin::Message-->
-                                                <div class="dz-message needsclick">
-                                                    <i class="ki-duotone ki-file-up fs-3x text-primary"><span class="path1"></span><span class="path2"></span></i>
-
-                                                    <!--begin::Info-->
-                                                    <div class="ms-4">
-                                                        <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                    
-                                                    </div>
-                                                    <!--end::Info-->
-                                                </div>
-                                            </div>
-                                            <!--end::Dropzone-->
+                                        <div class="mb-3">
+                                         
+                                          <input class="form-control" type="file" id="formFile">
                                         </div>
                                         <!--end::Input group-->
+                                        <button type="submit" class="btn btn-secondary">Upload file</button>
                                     </form>
                                     </div>
                                   </div>
@@ -710,20 +685,7 @@
   $('[data-toggle="tooltip"]').tooltip();   
 });
 
-var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
-    url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
-    paramName: "file", // The name that will be used to transfer the file
-    maxFiles: 10,
-    maxFilesize: 10, // MB
-    addRemoveLinks: true,
-    accept: function(file, done) {
-        if (file.name == "wow.jpg") {
-            done("Naha, you don't.");
-        } else {
-            done();
-        }
-    }
-});
+
 $(document).ready(function(){
   $('.acc-head').click(function(){
     $(this).next().slideToggle(500);

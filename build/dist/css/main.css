@@ -1059,6 +1059,20 @@ table p {
   border-radius: 50%;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-actions a:nth-child(2) {
+  margin-left: 5px;
+}
+.project-actions a:not(:nth-child(1)) {
+  margin-top: 5px;
+}
+.project-actions button {
+  margin-top: 5px;
+}
+
 @media (max-width: 767px) {
   .preview_icons {
     width: 100%;

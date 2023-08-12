@@ -1076,6 +1076,19 @@ $slide-content-height: 250px;
     border-radius: 50%;
   }
 }
+.project-actions{
+  display: flex;
+  flex-wrap: wrap;
+  a:nth-child(2){
+    margin-left:5px;
+  }
+  a:not(:nth-child(1)){
+    margin-top: 5px;
+  }
+  button{
+    margin-top: 5px;
+  }
+}
 
 
 @media (max-width: $breakpoint-mobile) {
